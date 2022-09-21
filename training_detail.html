@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="head">
+    <script src="static/libraries/web_vitals/web-vitals.umd.js"></script>
+    <script src="static/js/build/react-vendor.js" type="text/javascript" defer ></script>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <link href="static/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/home/training_detail.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="toast-ribbon-modal-container" style="display: none">
+    <div id="notification-ribbon" class="notification">
+        <div class='message-container'>
+            <span id="notification-message"></span>
+            <a title='Close' id="close_notification_ribbon" class="text-right close-notification">
+                <i class="is-icon-cross-s"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="toast trainings-toast general_toast">
+        <div class="toast-body-container">
+            <div class="toast-body heading_6">
+            </div>
+        </div>
+    </div>
+    <div class="toast trainings-toast error_toast">
+        <div class="toast-body-container">
+            <div class="toast-body heading_6">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal fade in trainings-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="image_container success_image">
+                        <img alt="success" src="/static/images/common/modal_success.svg">
+                    </div>
+                    <div class="image_container error_image">
+                        <img alt="error" src="/static/images/common/modal_error.svg">
+                    </div>
+                    <div class="image_container alert_image">
+                        <img alt="alert" src="/static/images/common/modal_alert.svg">
+                    </div>
+                    <div class="message_container">
+                        <div id="modal_text_heading" class="text-heading heading_5 small-device-text-center"></div>
+                        <div id="modal_text_message" class="text-message body-main small-device-text-center"></div>
+                        <div class="button_container">
+                            <button id="modal_secondary_btn" class="btn btn-secondary close_action"
+                                    data-dismiss="modal">Cancel
+                            </button>
+                            <a id="modal_primary_btn" class="btn btn-primary" data-dismiss="modal">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="general_ribbon" class="notification"
+     data-ribbon-message="Save ₹4000 on Web Development  training &amp; be the #1 choice of recruiters. Offer ends in"
+     data-ribbon-start_date="1663758151"
+     data-ribbon-end_date="1663957799"
+     data-ribbon-type="timer">
+    <div class="message">
+        <span id="general_ribbon_message">Save ₹4000 on Web Development  training & be the #1 choice of recruiters. Offer ends in</span>
+    </div>
+</div>
+
+<div class="dropdown-backdrop"></div>
+<div id="header">
+    <div id="navbar-container" class="position-relative">
+
+        <div class="modal " id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <i class="ic-24-cross" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="user-menu-container">
+                            <div id="user-menu">
+                            </div>
+                        </div>
+                        <form role="form" id="modal-login-form" method="POST">
+                            <input type="hidden" name="csrf_test_name" value="07d4a0539d8f306794bdcf8d040027bb">
+                            <div class="form-group">
+                                <label for="email" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="modal_email" tabindex="1" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="modal_password" tabindex="2" name="password">
+                            </div>
+                            <div class="forgot_password">
+                                <a href="login/forgot_password.html" id="forgot-password">Quên mật khẩu?</a>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="modal_login_submit" tabindex="3">Đăng nhập
+                                </button>
+                            </div>
+                            <div class="form-group new_to_internshala">
+                                <label>
+                                    Đăng ký ngay tại đây  (<a href="registration/student.html">Sinh viên</a> / <a
+                                        href="registration/employer.html">Công ty</a>)
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default navbar-expand-md" id="navbar">
+            <div class="container-fluid navbar-container max-width-container">
+                <div class="navbar-header" id="main-navbar-header">
+                    <button id="open-nav" type="button" class="border-0 navbar-toggler d-lg-none d-block"
+                            data-toggle="collapse" data-target="#dropdown">
+                        <i class='is-icon-menu'></i>
+                        <span class="offer_hamburger_dot d-block d-lg-none"></span>
+                    </button>
+                    <div class="navbar-header-item">
+                        <a class="navbar-brand" href="./index_custom.html">
+                        <img id="logo_image" src="static/images/home/internships/categories/internstarslogotrans.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse" id="dropdown">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+
+                        <li id="login-list-item" class="d-none d-lg-block">
+                            <a>
+                                <button class="btn btn-secondary" data-toggle="modal"  data-target="#login-modal">Đăng nhập</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-bar-trigger mobile-search">
+                    <i class="is-icon-search"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</div>
+
+
+<div id="page-tracking-param" class="d-none" data-page-tracking-param="sp" data-course-url="web-development"></div>
+
+<section id="training-highlights" class="section highlights-feature">
+    <p class="heading">Course Highlights</p>
+    <div class="highlights">
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/video_tutorials.png"
+                     data-loading="eager" data-alt="Learn online"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Learn online</p>
+                <p class="description">At your own schedule</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/mobile_friendly.png"
+                     data-loading="eager" data-alt="Mobile friendly"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Mobile friendly</p>
+                <p class="description">No laptop? No problem</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/placement_assistance.png"
+                     data-loading="eager" data-alt="Placement assistance"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Placement assistance</p>
+                <p class="description">To build your career</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/certificate_of_training.png"
+                     data-loading="eager" data-alt="Certificate of training"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Certificate of training</p>
+                <p class="description">from Internshala Trainings</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/projects-new.png"
+                     data-loading="eager" data-alt="1 project &amp; 5 assignments"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">1 project &amp; 5 assignments</p>
+                <p class="description">For hands-on practice</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/doubt_clearing.png"
+                     data-loading="eager" data-alt="Doubt clearing"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Doubt clearing</p>
+                <p class="description">Through Q&amp;A forum</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/beginner_friendly.png"
+                     data-loading="eager" data-alt="Beginner friendly"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Beginner friendly</p>
+                <p class="description">No prior knowledge required</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/weeks.png"
+                     data-loading="eager" data-alt="8 weeks duration"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">8 weeks duration</p>
+                <p class="description">1 hr/day (flexible schedule)</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load"
+                     data-src="/cached_uploads/web-development/signup_page_media/training_highlight_icons_tmt/downloadable_content.png"
+                     data-loading="eager" data-alt="Downloadable content"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Downloadable content</p>
+                <p class="description">With lifetime access</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="why-learn" class="section benefits">
+    <h2 class="heading">Why Learn Web Development?</h2>
+    <div class="details">
+        <div class="points">
+            <div class="point">
+                <p class="sub-heading">Build awesome websites</p>
+                <p class="description">Mark Zuckerberg built Facebook. Sachin Bansal built Flipkart. What will you
+                    build?</p>
+            </div>
+            <div class="point">
+                <p class="sub-heading">Be in demand</p>
+                <p class="description">With 1.7 billion websites on the internet, it is one of the hottest career
+                    options with an average fresher salary of 6 LPA for full stack developers according to
+                    Glassdoor.</p>
+            </div>
+            <div class="point">
+                <p class="sub-heading">Eat-Sleep-Code-Repeat</p>
+                <p class="description">Be it rain or sunshine, coding is always on your mind.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="lazy-load"
+                 data-src="/cached_uploads/web-development/signup_page_media/illustration-images/why-learn.png"
+                 data-alt="Web Development Course"></div>
+        </div>
+    </div>
+</section>
+<section id="certificate" class="section benefits">
+    <h3 class="heading d-none">Industry Recognized Web Development Certification</h3>
+    <div class="details">
+        <div class="image-container" data-toggle="modal" data-target="#certificate-modal" id="certificate-image">
+            <div class="sample-certificate-modal certificate-lazy-load">
+                <div class="sample-certificate-container">
+                    <div class="d-none">
+                        <img class="certificate-image"
+                             src="/cached_uploads/web-development/signup_page_media/certificate-new-ds.png"
+                             alt="Web Development Certification Training"/>
+                    </div>
+                </div>
+            </div>
+            <div class="zoom-in-icon"></div>
+        </div>
+        <div class="points">
+            <div class="point">
+                <p class="sub-heading"> Industry Recognized Web Development Certification</p>
+                <p class="description">100,000+ companies use Internshala for hiring every year. So a certificate from
+                    Internshala is recognized everywhere.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="placement" class="section benefits web-development">
+    <p class="heading">What placement assistance will you receive?</p>
+    <div class="details">
+        <div class="points">
+            <div class="point">
+                <p class="sub-heading">Free Placement Prep Training</p>
+                <p class="description">Learn how to build your resume, make great applications, and ace your
+                    interviews.</p>
+            </div>
+            <div class="point">
+                <p class="sub-heading">Curated internships & jobs</p>
+                <p class="description">Get internships and fresher jobs as per your preference in your inbox.</p>
+            </div>
+            <div class="point">
+                <p class="sub-heading">Get highlighted on Internshala</p>
+                <p class="description">Top performers will be highlighted in their internship & job applications on
+                    Internshala.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="lazy-load"
+                 data-src="/cached_uploads/web-development/signup_page_media/illustration-images/placement.png"
+                 data-alt="Web Development Placement Assistance"></div>
+        </div>
+    </div>
+</section>
+<section id="features" class="section highlights-feature">
+    <p class="heading">How will your training work?</p>
+    <div class="highlights">
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/videos.png"
+                     data-loading="eager" data-alt="Learn concepts"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Learn concepts</p>
+                <p class="description">Go through training videos to learn concepts</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/assignments.png"
+                     data-loading="eager" data-alt="Test yourself"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Test yourself</p>
+                <p class="description">Test your knowledge through quizzes &amp; module tests at regular intervals</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/practice.png"
+                     data-loading="eager" data-alt="Hands-on practice"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Hands-on practice</p>
+                <p class="description">Work on assignments and projects. Use our in-browser IDE for coding practice</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/doubt_clearing.png"
+                     data-loading="eager" data-alt="1:1 doubt solving"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">1:1 doubt solving</p>
+                <p class="description">Get your doubts solved by experts through Q&amp;A forum within 24 hours</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/test.png"
+                     data-loading="eager" data-alt="Take final exam"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Take final exam</p>
+                <p class="description">Complete your training by taking the final exam</p>
+            </div>
+        </div>
+        <div class="highlight">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-l/certificate.png"
+                     data-loading="eager" data-alt="Get certified"></div>
+            </div>
+            <div class="details">
+                <p class="sub-heading">Get certified</p>
+                <p class="description">Get certified in Web Development upon successful completion of training</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="syllabus" class="section">
+    <h3 class="heading">Web Development Training Syllabus </h3>
+    <div class="brief">
+        <div class="info">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-s/videos.png"
+                     data-alt="138 video tutorials"></div>
+            </div>
+            <p class="sub-heading-inner">138 video tutorials</p>
+        </div>
+        <div class="info">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-s/assignments.png"
+                     data-alt="5 assignments"></div>
+            </div>
+            <p class="sub-heading-inner">5 assignments</p>
+        </div>
+        <div class="info">
+            <div class="image-container">
+                <div class="lazy-load" data-src="/cached_uploads/signup_ab/features/icons-s/projects.png"
+                     data-alt="1 project"></div>
+            </div>
+            <p class="sub-heading-inner">1 project</p>
+        </div>
+    </div>
+    <p class="sub-heading">After completing the training, you can also download videos for future reference</p>
+
+    <div id="accordion-syllabus" class="modules-and-topics-container">
+
+        <div class="module-and-topic-container ">
+            <div class="collapse-item border-top-0">
+                <div class="module-container collapse-title " data-toggle="collapse"
+                     data-target="#topics-container-collapse-1">
+                    <div class="module ">
+                        <h4 class="title">HTML</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">6 Topics</span>
+                            </div>
+                            <div class="no-of-demo-videos">
+                                <i class="is-icon-play-circle"></i>
+                                <span class="content">1 Demo video inside</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse show" id="topics-container-collapse-1"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic public-video" data-toggle="modal" data-target="#demo-video-modal"
+                             data-demo-video-id="651044472">
+                            <div class="icon">
+                                <i class="is-icon-play-circle"></i>
+                            </div>
+                            <div class="name">Training Overview Video</div>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">About the Training</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Basic Concepts of Web Development</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Setting Up Local Environment</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Introduction to HTML</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">HTML Tags</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Lists, Tables, and Forms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container ">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-2">
+                    <div class="module ">
+                        <h4 class="title">CSS</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">11 Topics</span>
+                            </div>
+                            <div class="no-of-demo-videos">
+                                <i class="is-icon-play-circle"></i>
+                                <span class="content">1 Demo video inside</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-2"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic public-video" data-toggle="modal" data-target="#demo-video-modal"
+                             data-demo-video-id="651462623">
+                            <i class="is-icon-play-circle"></i>
+                            <span class="name">Introduction to CSS</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">CSS Selectors</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Unit: Length and Color</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">CSS Properties</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Box Model</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Inspect Element</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Display</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Position</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Structuring a Web Page</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Flexbox</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Media Queries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container ">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-3">
+                    <div class="module ">
+                        <h4 class="title">Bootstrap</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">3 Topics</span>
+                            </div>
+                            <div class="no-of-demo-videos">
+                                <i class="is-icon-play-circle"></i>
+                                <span class="content">1 Demo video inside</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-3"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Introduction to Bootstrap</span>
+                        </div>
+                        <div class="topic public-video" data-toggle="modal" data-target="#demo-video-modal"
+                             data-demo-video-id="651087348">
+                            <i class="is-icon-play-circle"></i>
+                            <span class="name">Layout</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Other Components</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container ">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-4">
+                    <div class="module ">
+                        <h4 class="title">DBMS</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">9 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-4"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Introduction to DBMS</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Basic Concepts and Terminologies</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">SQL Queries - Database Related</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">SQL Queries - Tables Related</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">SQL Queries - Records Related</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Designing a Database</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Database Relationships</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Join Queries</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Importing and Exporting a Database</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container ">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-5">
+                    <div class="module last-child-padding">
+                        <h4 class="title">PHP</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">10 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-5"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">PHP: Introduction and Installation</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Variables and Operators</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Conditional Statements</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Loops</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Arrays</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Strings</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Functions</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Form Submission</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Database Communication</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Cookies and Sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container hide">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-6">
+                    <div class="module ">
+                        <h4 class="title">JS</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">10 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-6"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Introduction to Javascript</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Variables and Operators</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Conditional Statements and Loops</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Functions</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Objects and Classes</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Arrays</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Strings</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">JavaScript as a Client Side Language</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Debugging JS Using Inspect Element</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">AJAX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container hide">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-7">
+                    <div class="module ">
+                        <h4 class="title">React</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">10 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-7"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Introduction to React</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Creating an Element</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">JSX</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Components</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Props</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">States</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Managing States and Data Flow</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Create React App</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Breaking Into Modules</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Deploy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-and-topic-container hide">
+            <div class="collapse-item ">
+                <div class="module-container collapse-title collapsed" data-toggle="collapse"
+                     data-target="#topics-container-collapse-8">
+                    <div class="module ">
+                        <h4 class="title">Final Project</h4>
+                        <div class="info">
+                            <div class="no-of-topics">
+                                <i class="is-icon-file-text"></i>
+                                <span class="content">5 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <i class="is-icon-chevron-down"></i>
+                        <i class="is-icon-chevron-up"></i>
+                    </div>
+                </div>
+                <div class="topics-container collapse " id="topics-container-collapse-8"
+                     data-parent="#accordion-syllabus">
+                    <div class="topics">
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">Building PG-Life Project</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">PG-Life: Setting up DBMS</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">PG-Life: Using PHP</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">PG-Life: Using JS and AJAX</span>
+                        </div>
+                        <div class="topic ">
+                            <i class="is-icon-bullet"></i>
+                            <span class="name">PG-Life: Using React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view-more">
+        <button id="show-module">View 3 more modules</button>
+    </div>
+</section>
+<div id="course-projects-section" class="section">
+    <div class="course-projects-container ">
+        <h3 class="project-heading">Full Stack Web Development Course Project Details</h3>
+        <div class="projects-container">
+            <div class="project-card  ">
+                <div class="header">
+                    <h4 class="title">Student accommodation website</h4>
+                    <p class="separator"></p>
+                </div>
+                <div class="body">
+                    <p class="description">Apply your knowledge of HTML, CSS, Bootstrap, MySQL, and PHP to create a
+                        student accomodation website that works seamlessly on different devices.</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+        </div>
+    </div>
+</div>
+
+<section id="teachers-section" class="section max-width-container">
+    <div class="heading">Your Teachers</div>
+    <div class="teachers-container">
+        <div class="custom-carousel">
+            <div class="slider count-2">
+                <div class="slider-item">
+                    <div class="teacher-card h-100">
+                        <div class="image-wrapper w-100">
+                            <div class="image-container">
+                                <div class="lazy-load"
+                                     data-src="/cached_uploads/web-development/signup_page_media/teachers_images/anuj_kalbalia.png"
+                                     data-loading="eager" data-alt="Anuj Kalbalia"></div>
+                            </div>
+                        </div>
+                        <div class="teacher-info-container h-100">
+                            <p class="name">Anuj Kalbalia</p>
+                            <p class="designation">Founder, Ungineering</p>
+                            <div class="separator"></div>
+                            <p class="about-info">10+ years of experience building back-end solutions for reputed
+                                organizations like IBM and Internshala.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="teacher-card h-100">
+                        <div class="image-wrapper w-100">
+                            <div class="image-container">
+                                <div class="lazy-load"
+                                     data-src="/cached_uploads/web-development/signup_page_media/teachers_images/aditya_sood.png"
+                                     data-loading="eager" data-alt="Aditya Sood"></div>
+                            </div>
+                        </div>
+                        <div class="teacher-info-container h-100">
+                            <p class="name">Aditya Sood</p>
+                            <p class="designation">Instructional Designer</p>
+                            <div class="separator"></div>
+                            <p class="about-info">5+ years of experience including in the EdTech industry as a learning
+                                experience designer. Has worked as an assistant professor and published several
+                                scientific papers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-container d-xxl-none">
+                <div class="navigation d-flex align-items-center justify-content-center">
+                    <i class="is-icon-chevron-left control left disabled" aria-hidden="true"></i>
+                    <div class="indicators-container small">
+                        <div class='indicators d-flex'>
+                            <div class="indicator"></div>
+                            <div class="indicator d-xxl-none"></div>
+                        </div>
+                        <div class="active-indicator"></div>
+                    </div>
+                    <i class="is-icon-chevron-right control right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="feedbacks-section" class="section max-width-container">
+    <div class="heading">Reviews from students</div>
+    <div class="ratings-container">
+        <div class="heading">AVERAGE RATINGS</div>
+        <div class="rating-and-stars-container">
+            <span class="rating">4.1</span>
+            <span class="stars-container">
+                                                            <i class="is-icon-star-filled-s color"></i>
+                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                        <i class="is-icon-star-half-diagonal color"></i>
+                                                </span>
+        </div>
+    </div>
+    <div class="feedbacks-container">
+        <div class="custom-carousel">
+            <div class="slider">
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">4.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">I got placed in a company for the role of Web Developer! It was
+                                    only because of the training content which helped me improve my skills. Assignments
+                                    and tests checked my training learnings very effectively.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/harshit.png"
+                                         data-alt="Harshit"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Harshit</div>
+                                    <p class="institute">Federal Institute Of Science And Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">5.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">I learnt Web Development from scratch. The tutorials and topics
+                                    were well prepared, clearly explained, and easy to grasp. All the queries were
+                                    answered by the teacher which helped me a lot.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/karina.png"
+                                         data-alt="Karina"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Karina</div>
+                                    <p class="institute">VNR Vigna Jyothi Institute of Engineering and Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">4.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">Now I can develop websites with awesome designs! A
+                                    well-designed training, Internshala Trainings helps you learn website building from
+                                    scratch. Explanation and doubt clarification are the plus points of the teacher.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/mahodhay_reddy_narahari.png"
+                                         data-alt="Mahodhay Reddy Narahari"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Mahodhay Reddy Narahari</div>
+                                    <p class="institute">Bhilai Institute of Technology, Raipur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">5.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">I took the Web Development training and it was great! Each
+                                    module has separate test rounds and assignments with progress reports which helped
+                                    me map the progress of the training.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/kunal.png"
+                                         data-alt="Kunal"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Kunal</div>
+                                    <p class="institute">Guru Nanak Institute of Engineering and Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">5.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">The training covers various topics like HTML, CSS, Bootstrap,
+                                    and PHP. The best part of the training was that in every topic, links are provided
+                                    in case we want to learn in-depth about the topics.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/yogesh_sawarkar.png"
+                                         data-alt="Yogesh Sawarkar"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Yogesh Sawarkar</div>
+                                    <p class="institute">Central University Of Karnataka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">4.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">This training helped me learn web development from scratch.
+                                    Knowledge about front end languages and frameworks and backend languages were
+                                    provided along with doubts solving.</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/jaivignesh_c_s.png"
+                                         data-alt="Jaivignesh C S"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Jaivignesh C S</div>
+                                    <p class="institute">Knowledge Institute Of Technology (KIOT)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">4.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">The training was interactive and interesting with a good
+                                    mixture of practical and theory. The instructor explained everything to the point.
+                                    The final project enabled me to have my first full fledged website.
+                                </p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/harsh.png"
+                                         data-alt="Harsh"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Harsh</div>
+                                    <p class="institute">Saveetha School Of Engineering</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">5.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">I started the web development training as a complete beginner
+                                    but before long, I was able to build a strong connection between various concepts
+                                    and work on some interesting projects of my own. I would recommend this training to
+                                    anyone interested in learning web development!</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/sarfaraj_salim_khan.png"
+                                         data-alt="Sarfaraj Salim Khan"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Sarfaraj Salim Khan</div>
+                                    <p class="institute">Chandigarh University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="feedbacks-card-container h-100">
+                        <div class="feedbacks-card h-100">
+                            <div>
+                                <div class="rating-and-stars-container">
+                                    <span class="rating">4.0</span>
+                                    <span class="stars-container">
+                                                                                                                        <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s color"></i>
+                                                                                                                                                                <i class="is-icon-star-filled-s non-color"></i>
+                                                                                                            </span>
+                                </div>
+                                <p class="feedback-body">The Web Development training content was awesome and instructor
+                                    is vastly knowledgeable. During the course period I asked some questions and my
+                                    doubts were solved immediately. I&#039;m thoroughly impressed by this training!</p>
+                            </div>
+                            <div class="image-and-details-conatiner d-flex align-items-center">
+                                <div class="image-container">
+                                    <div class="lazy-load" data-loading="eager"
+                                         data-src="/cached_uploads/web-development/signup_page_media/feedback_givers_images/piyush.png"
+                                         data-alt="Piyush"></div>
+                                </div>
+                                <div class="feedback-giver-info-container">
+                                    <div class="name">Piyush</div>
+                                    <p class="institute">Government Engineering College, Bharatpur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-container ">
+                <div class="navigation d-flex align-items-center justify-content-center">
+                    <i class="is-icon-chevron-left control left disabled" aria-hidden="true"></i>
+                    <div class="indicators-container small">
+                        <div class='indicators d-flex'>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator d-3xl-none"></div>
+                            <div class="indicator d-xxl-none"></div>
+                        </div>
+                        <div class="active-indicator"></div>
+                    </div>
+                    <i class="is-icon-chevron-right control right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq-section" class="section max-width-container">
+    <h3 class="heading">Web Development Training FAQs</h3>
+    <div class="help-center-faq-container">
+        <div class="faq-container d-flex">
+            <div class="category-container">
+                <ul class="nav is-nav-tabs vertical_reverse">
+
+                    <li class="nav-item">
+                        <a data-uri="Training Specific" data-name="Training Specific" data-toggle="tab"
+                           class="category-heading nav-link heading_6 active">
+                            <span>Training Specific</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-uri="trainings" data-name="trainings" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Training Prerequisites</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-uri="time-mode" data-name="time-mode" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Time &amp; Mode of Delivery</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-uri="placement" data-name="placement" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Placement Assistance</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-uri="payment" data-name="payment" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Payment</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-uri="certificate" data-name="certificate" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Certificate</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-uri="further-assistance" data-name="Need Further Assistance?" data-toggle="tab"
+                           class="category-heading nav-link heading_6 ">
+                            <span>Need Further Assistance?</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="accordion">
+                <div id="category_content_Training Specific" class="faq-category-content active-category">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. What is Web Development?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                As the above name suggests, Web Development is mostly about developing websites for the
+                                internet. But it's not just developing websites, it is also about designing them and
+                                curating them with your creativity. Web development can consist of developing the
+                                easiest websites to the most complex ones.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_1"
+                             aria-expanded="false">
+                            <div class="title">Q. What are the 3 types of Web Development?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_1" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                <ol>
+                                    <li>Front-End Web Development</li>
+                                    <li>Back-End Web Development</li>
+                                    <li>Full-stack Web Development</li>
+                                </ol>
+                                You will have much more in-depth knowledge about them when you start your web
+                                development course.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_2"
+                             aria-expanded="false">
+                            <div class="title">Q. What are the 3 programming languages on which web development is
+                                dependent?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_2" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Web development is the most basic thing regardless of the fact that it is the only
+                                thing, on which everything is structured. There are totally 3 languages on which web
+                                development is dependent.
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                You will learn all these languages in Internshala's web development online course.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_3"
+                             aria-expanded="false">
+                            <div class="title">Q. What is the difference between a front end, back end, and full stack
+                                web developer?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_3" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                There is a very big difference between the 3 but in the end, they work all together.
+                                There is a very obvious line between these 3. You can easily choose which you want to
+                                expertise. If you want to design and you are more into drafting and designing, you
+                                should go for the front end and if you are keener to know what is going behind the
+                                scene, you can be the back-end developer.
+                                <br>And if you like both? You can be a full-stack web developer. You can choose any and
+                                it is up to you. But in today�s time, Full Stack web development courses are more in the
+                                trend.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_4"
+                             aria-expanded="false">
+                            <div class="title">Q. What are the jobs you can opt for after learning web development?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_4" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Web development is always in demand and it can be fruitful for your career because it is
+                                an ongoing revolution. You have a lot of career choices such as:
+                                <ol>
+                                    <li>Front-end developer</li>
+                                    <li>Back-end developer</li>
+                                    <li>Full-stack developer</li>
+                                    <li>Software engineer</li>
+                                    <li>Senior web developer</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_trainings" class="faq-category-content ">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. What software/tools would be needed for the training and how can I get
+                                them?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                All the software/tools that you need for the training would be shared with you during
+                                the training as and when you need it.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_1"
+                             aria-expanded="false">
+                            <div class="title">Q. Do I need to have a laptop or desktop to do the training or can I do
+                                it on mobile too?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_1" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                You can watch the videos and take quizzes & tests on any device including mobile.
+                                However, for assignments and practice, use of desktop or laptop is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_2"
+                             aria-expanded="false">
+                            <div class="title">Q. What system configuration is needed to do this training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_2" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                To do this training, you would need a computer with a minimum 1 GB ram and Windows 8 or
+                                later (64 bit).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_3"
+                             aria-expanded="false">
+                            <div class="title">Q. What are the prerequisites for the training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_3" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                There are no prerequisites for this training as it is of beginner level. Everything that
+                                you need to know about Web Development would be taught to you from scratch.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_time-mode" class="faq-category-content ">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. When can I start the training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                You can choose your preferred batch date while signing up for the training program and
+                                start accordingly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_1"
+                             aria-expanded="false">
+                            <div class="title">Q. What will be the timings of the training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_1" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                As this is a purely online training program, you can choose to learn at any time of the
+                                day and for as much time as you want. We will recommend a pace to be followed throughout
+                                the program, but the actual timings and learning hours are in your hands.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_2"
+                             aria-expanded="false">
+                            <div class="title">Q. What will be the language of delivery for this training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_2" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                You can choose between English or Hindi videos for the training depending on your
+                                preference. However, the text chapters, quizzes, assignments, and projects will be in
+                                English only.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_3"
+                             aria-expanded="false">
+                            <div class="title">Q. What is the training duration or what does 8 weeks access to the
+                                platform mean?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_3" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                From your batch start date, you will have access to training's content (videos, quizzes,
+                                tests, assignments, projects etc.) in the platform for 8 weeks with-in which you should
+                                be able to complete your training.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_4"
+                             aria-expanded="false">
+                            <div class="title">Q. How much time should I spend on the training every day to be able to
+                                complete it in 8 weeks?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_4" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                As this is a purely online training program, you can choose to spend as much time as you
+                                want per day and the more time you spend, sooner you would be able to complete the
+                                training. However, on an average, spending 1-2 hours per day should be sufficient for
+                                you to complete the training in 8 weeks. Some students also choose to devote more time
+                                on the weekends in case they are not able to give time on the weekdays.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_5"
+                             aria-expanded="false">
+                            <div class="title">Q. What if I&#039;m not able to complete my training in 8 weeks?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_5" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Don't worry! If for some reason, you are not able to complete the training in 8 weeks;
+                                we would extend your access to the platform for sufficient duration (maximum upto
+                                another 8 weeks) so that you can complete it.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_6"
+                             aria-expanded="false">
+                            <div class="title">Q. What are the benefits of 8 weeks access?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_6" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Having 8 weeks access ensures you have a deadline to work with and are able to complete
+                                the training. It also helps you beat procrastination and maintain continuity in your
+                                studies which is why Internshala Trainings students have some of the best training
+                                completion rates in the industry.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_7"
+                             aria-expanded="false">
+                            <div class="title">Q. What will happen when my 8 weeks access is over?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_7" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                If you have completed the training, you would be able to download the training content
+                                and have <b>lifetime access</b> to it for future reference.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_8"
+                             aria-expanded="false">
+                            <div class="title">Q. Will I be able to download the study material?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_8" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Yes, you would be able to download the training content and have <b>lifetime access</b>
+                                to it for future reference.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_placement" class="faq-category-content ">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. What placement assistance will I receive from Internshala as part of
+                                the training?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                <ul class='force-grey'>
+                                    <li>You will receive <b>free access</b> to Placement Preparation Training on the
+                                        platform which covers resume writing, cover letter writing, how to search and
+                                        apply for internships and jobs on Internshala, and interview preparation. This
+                                        training comes with a lifetime access meaning you can use it later also if you
+                                        are not applying for internships or jobs right now.
+                                    </li>
+                                    <li><b>Access to curated internships & jobs</b> related to the training - after
+                                        completing the training, you would receive a list of handpicked internships or
+                                        jobs every week that you can apply to as per your preference.
+                                    </li>
+                                    <li>If you are a top performer, a badge of achievement will be added to your
+                                        Internshala resume and shown to the employers when you apply to internships or
+                                        jobs on Internshala.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_1"
+                             aria-expanded="false">
+                            <div class="title">Q. What is the criteria to be a top performer in the training?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_1" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                When you score >= 90% in the final test, you will be a top performer and you will get
+                                highlighted in your internship and job applications.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_2"
+                             aria-expanded="false">
+                            <div class="title">Q. Does Internshala Trainings guarantee a job or internship placement?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_2" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                While many of our students have found their desired internships or jobs after completing
+                                their training, Internshala Trainings does not guarantee an internship or job. However,
+                                if you study sincerely (including doing exercises, assignments, and projects) and make
+                                good use of our placement assistance feature, it will become easier for you to get a
+                                placement using the skills learned in the training.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_3"
+                             aria-expanded="false">
+                            <div class="title">Q. Is Internshala Trainings certificate recognized in the industry?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_3" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                More than 100,000 companies use Internshala to hire interns and employees and hence they
+                                will recognise a certificate from Internshala when they see one on your resume. However,
+                                please note that more than the certificate, companies hire candidates based on their
+                                skills and their performance in the interview so we hope you do a good job of learning
+                                the skill in the training and preparing for the interview using our placement assistance
+                                feature.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_payment" class="faq-category-content ">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. I&#039;m not able to make payment. What should you do now?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                You could try making the payment from a different card or account (of a friend or
+                                family). Otherwise, you can follow the instructions on how to make an <a
+                                    href='https://trainings.internshala.com/offline_payment/?source=FAQ' target='_blank'
+                                    class='link'>offline payment here</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_1"
+                             aria-expanded="false">
+                            <div class="title">Q. My payment got deducted twice. What should I do now?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_1" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                Just let us know your registered email id along with the screenshot of the payment
+                                receipt or transaction history. You can submit your request using the using the "Need
+                                further assistance?" section. Once verified, the additional amount you paid will be
+                                refunded.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_2"
+                             aria-expanded="false">
+                            <div class="title">Q. The payment shows failed but money got deducted? What should I do
+                                now?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_2" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                The amount deducted will come back to your account within 7-10 working days. This is the
+                                normal duration your bank will take to credit the amount back into your account.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_3"
+                             aria-expanded="false">
+                            <div class="title">Q. The payment was successful but it still shows &#039;Make Payment&#039;
+                                on my dashboard? What should I do?
+                            </div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_3" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                At times, there may be a slight delay in your payment reflecting on your Internshala
+                                Trainings dashboard. However, if your payment is not reflecting even after 30 minutes,
+                                please let us know your registered email id along with the screenshot of the payment
+                                receipt or transaction history. You can submit your request using the using the "Need
+                                further assistance?" section. Once verified, we will update your payment status from the
+                                backend.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_certificate" class="faq-category-content ">
+                    <div class="collapse-item">
+                        <div class="collapse-title collapsed" data-toggle="collapse" data-target="#answer_0"
+                             aria-expanded="false">
+                            <div class="title">Q. Will I be getting a hard copy of the certificate?</div>
+                            <div class="icon-container">
+                                <i class="is-icon-plus"></i>
+                                <i class="is-icon-minus"></i>
+                            </div>
+                        </div>
+                        <div id="answer_0" class="collapse answer" data-parent="#accordion">
+                            <div class="collapse-body">
+                                No, you will be only getting a soft copy of the certificate which you can download and
+                                print out if required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="category_content_further-assistance" class="faq-category-content  mx-auto">
+                    <div id="help_form" data-course="" data-support-contact-no="" data-course-name="" data-name=""
+                         data-email=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal transparent fade" id="certificate-modal">
+    <div class="modal-dialog modal-dialog-centered justify-content-center modal-lg">
+        <div class="modal-content border-0">
+            <div class="close-btn d-flex justify-content-end">
+                <i class="is-icon-cross ml-auto" data-dismiss="modal"></i>
+            </div>
+            <div class="certificate-image-container">
+                <div class="pinch certificate-lazy-load">
+                    <div class="sample-certificate-container">
+                        <div class="d-none">
+                            <img class="certificate-image"
+                                 src="/cached_uploads/web-development/signup_page_media/certificate-new-ds.png"
+                                 alt="Web Development Certification Training"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal transparent fade" id="demo-video-modal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+            <div class="demo-video-content-container">
+                <div class="close d-flex justify-content-end">
+                    <i class="is-icon-cross ml-auto" data-dismiss="modal"></i>
+                </div>
+                <div class="demo-video-container">
+                    <iframe id="vimeo-video" src="" frameborder="0" allow="autoplay; autopause;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="signup-nav w-100 signup-fixed-nav fixed-top hide">
+    <div class='container d-flex max-width-container'>
+        <div class="nav-items-container d-flex ">
+            <a class="nav-item" href="#certificate">Certificate</a>
+            <a class="nav-item" href="#placement">Placement</a>
+            <a class="nav-item" href="#syllabus">Syllabus</a>
+            <a class="nav-item" href="#course-projects-section">Projects</a>
+            <a class="nav-item" href="#teachers-section">Teachers</a>
+            <a class="nav-item" href="#feedbacks-section">Reviews</a>
+        </div>
+        <div class="container-offer-price-signup-btn">
+            <div class="offer-price">
+                <div class="price-container d-inline-flex">
+                    <div class="final-price"><i class="is-icon-rupee-s"></i><span class="dynamic-price">999</span></div>
+                    <p class="strike-price line-through"><i class="is-icon-rupee-s"></i><span>4999</span></p>
+                </div>
+                <div class="valid-till-container-nav d-inline-flex">
+                    <p class="price-message-nav dynamic-message">Valid till 23rd Sep</p>
+                </div>
+            </div>
+            <a class="signup-btn btn btn-primary regular" href=#>Enroll Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-nav w-100 signup-fixed-nav fixed-bottom hide">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="container-offer-price-signup-btn">
+            <div class="offer-price">
+                <div class="price-container d-inline-flex">
+                    <div class="final-price"><i class="is-icon-rupee-s"></i><span class="dynamic-price">999</span></div>
+                    <p class="strike-price line-through"><i class="is-icon-rupee-s"></i><span>4999</span></p>
+                </div>
+                <div class="valid-till-container-nav d-inline-flex">
+                    <p class="price-message dynamic-message">Valid till 23rd Sep</p>
+                </div>
+            </div>
+            <a href=# class="signup-btn bottom-nav-btn-rbn btn btn-primary regular">Enroll Now</a>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="max-width-container">
+        <div>
+            <div class="footer-inner">
+                <div class="inner-footer d-block d-md-none programming-small">
+                    <div class="menu-heading">
+                        <p>Programming</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/web-development-course">Web Development</a>
+                        </div>
+                        <div>
+                            <a href="/python-course">Programming with Python</a>
+                        </div>
+                        <div>
+                            <a href="/c-plus-plus-course">Programming with C and C++</a>
+                        </div>
+                        <div>
+                            <a href="/java-course">Core Java</a>
+                        </div>
+                        <div>
+                            <a href="/android-course">Android App Development</a>
+                        </div>
+                        <div>
+                            <a href="/hacking-course">Ethical Hacking</a>
+                        </div>
+                        <div>
+                            <a href="/react-course">React</a>
+                        </div>
+                        <div>
+                            <a href="/data-structures-algorithms-course">Data Structures & Algorithms</a>
+                        </div>
+                        <div>
+                            <a href="/clinical-trials-analysis-reporting-course">Clinical Trial Analysis & Reporting</a>
+                        </div>
+                        <div>
+                            <a href="/blockchain-course">Blockchain</a>
+                        </div>
+                        <div>
+                            <a href="/matlab-course">MATLAB</a>
+                        </div>
+                        <div>
+                            <a href="/software-testing-course">Software Testing</a>
+                        </div>
+                        <div>
+                            <a href="/aws-course">Cloud computing with AWS</a>
+                        </div>
+                        <div>
+                            <a href="/plc-programming-course">PLC Programming</a>
+                        </div>
+                        <div>
+                            <a href="/product-management-course">Product Management</a>
+                        </div>
+                        <div>
+                            <a href="/nodejs-course">Node JS</a>
+                        </div>
+                        <div>
+                            <a href="/sas-programming-course">SAS Programming</a>
+                        </div>
+                        <div>
+                            <a href="/angular-course">Angular</a>
+                        </div>
+                        <div>
+                            <a href="/robotic-process-automation-course">Robotic Process Automation</a>
+                        </div>
+                        <div>
+                            <a href="/ar-vr-course">AR/VR</a>
+                        </div>
+                        <div>
+                            <a href="/git-course">Git & GitHub</a>
+                        </div>
+                        <div>
+                            <a href="/voice-apps-course">Voice App Development</a>
+                        </div>
+                        <div>
+                            <a href="/how-to-ace-coding-interviews-course">How to Ace Coding Interviews</a>
+                        </div>
+                        <div>
+                            <a href="/full-stack-web-development-specialization">Full Stack Development
+                                Specialization</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-lg-none programming">
+                    <div class="menu-heading">
+                        <p>Programming Trainings</p>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div>
+                                <a href="/web-development-course">Web Development</a>
+                            </div>
+                            <div>
+                                <a href="/python-course">Programming with Python</a>
+                            </div>
+                            <div>
+                                <a href="/c-plus-plus-course">Programming with C and C++</a>
+                            </div>
+                            <div>
+                                <a href="/java-course">Core Java</a>
+                            </div>
+                            <div>
+                                <a href="/android-course">Android App Development</a>
+                            </div>
+                            <div>
+                                <a href="/hacking-course">Ethical Hacking</a>
+                            </div>
+                            <div>
+                                <a href="/react-course">React</a>
+                            </div>
+                            <div>
+                                <a href="/data-structures-algorithms-course">Data Structures & Algorithms</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <a href="/clinical-trials-analysis-reporting-course">Clinical Trial Analysis &
+                                    Reporting</a>
+                            </div>
+                            <div>
+                                <a href="/blockchain-course">Blockchain</a>
+                            </div>
+                            <div>
+                                <a href="/matlab-course">MATLAB</a>
+                            </div>
+                            <div>
+                                <a href="/software-testing-course">Software Testing</a>
+                            </div>
+                            <div>
+                                <a href="/aws-course">Cloud computing with AWS</a>
+                            </div>
+                            <div>
+                                <a href="/plc-programming-course">PLC Programming</a>
+                            </div>
+                            <div>
+                                <a href="/product-management-course">Product Management</a>
+                            </div>
+                            <div>
+                                <a href="/nodejs-course">Node JS</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <a href="/sas-programming-course">SAS Programming</a>
+                            </div>
+                            <div>
+                                <a href="/angular-course">Angular</a>
+                            </div>
+                            <div>
+                                <a href="/robotic-process-automation-course">Robotic Process Automation</a>
+                            </div>
+                            <div>
+                                <a href="/ar-vr-course">AR/VR</a>
+                            </div>
+                            <div>
+                                <a href="/git-course">Git & GitHub</a>
+                            </div>
+                            <div>
+                                <a href="/voice-apps-course">Voice App Development</a>
+                            </div>
+                            <div>
+                                <a href="/how-to-ace-coding-interviews-course">How to Ace Coding Interviews</a>
+                            </div>
+                            <div>
+                                <a href="/full-stack-web-development-specialization">Full Stack Development
+                                    Specialization</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a1">
+                    <div class="menu-heading">
+                        <p>Programming</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/web-development-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Web Development
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/python-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Programming with Python
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/c-plus-plus-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Programming with C and C++
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/java-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Core Java
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/android-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Android App Development
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/hacking-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Ethical Hacking
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/react-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                React
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/data-structures-algorithms-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Data Structures &amp; Algorithms
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/clinical-trials-analysis-reporting-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Clinical Trial Analysis &amp; Reporting
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/blockchain-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Blockchain
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/matlab-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                MATLAB
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/software-testing-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Software Testing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/aws-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Cloud computing with AWS
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/plc-programming-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                PLC Programming
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/product-management-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Product Management
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/nodejs-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Node JS
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/sas-programming-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                SAS Programming
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/angular-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Angular
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/robotic-process-automation-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Robotic Process Automation
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/ar-vr-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                AR/VR
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/git-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Git &amp; GitHub
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/voice-apps-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                Voice App Development
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/how-to-ace-coding-interviews-course/?tracking_source=trainings-footer-programming-sp"
+                               style="">
+                                How to Ace Coding Interviews
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/full-stack-web-development-specialization/?tracking_source=trainings-footer-programming-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Full Stack Development Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a2">
+                    <div class="menu-heading">
+                        <p>Business &amp; Management</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/digital-marketing-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Digital Marketing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/excel-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Advanced Excel
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/financial-modeling-valuation-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Financial Modeling and Valuation
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/business-analytics-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Business Analytics
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/hr-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Human Resource Management
+
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/business-communication-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Business Communication Skills
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/stock-market-trading-training/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Stock Market Trading
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/tally-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Tally
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/sql-data-analytics-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                SQL for Data Analytics
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/hr-advanced-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Advanced Human Resource Management
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/product-management-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Product Management
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/personal-finance-101-course/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="">
+                                Personal Finance 101
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/digital-marketing-specialization/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Digital Marketing Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/human-resource-management-specialization/?tracking_source=trainings-footer-business-&amp;-management-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Human Resource Management Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a3">
+                    <div class="menu-heading">
+                        <p>Core Engineering</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/autocad-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                AutoCAD
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/vlsi-design-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                VLSI Design
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/solidworks-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                SOLIDWORKS
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/matlab-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                MATLAB
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/ansys-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Ansys
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/catia-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                CATIA
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/staad-pro-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                STAAD Pro
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/plc-programming-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                PLC Programming
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/arduino-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Arduino
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/autocad-three-d-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                AutoCAD 3D
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/advanced-solidworks-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Advanced SOLIDWORKS
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/fusion-360-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Fusion 360
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/iot-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Internet of Things
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/siemens-nx-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Siemens NX
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/three-d-printing-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                3D Printing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/embedded-systems-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Embedded Systems
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/labview-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                LabVIEW
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/engineering-drawing-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Engineering Drawing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/creo-parametric-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                Creo Parametric
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/pcb-course/?tracking_source=trainings-footer-core-engineering-sp"
+                               style="">
+                                PCB Design
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a4">
+                    <div class="menu-heading">
+                        <p>Data Science</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/machine-learning-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Machine Learning
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/data-science-beginner-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Data Science
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/business-analytics-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Business Analytics
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/clinical-trials-analysis-reporting-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Clinical Trial Analysis &amp; Reporting
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/sql-data-analytics-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                SQL for Data Analytics
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/power-bi-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Power BI
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/deep-learning-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Deep Learning
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/tableau-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Tableau
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/sas-programming-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                SAS Programming
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/natural-language-processing-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Natural Language Processing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/statistics-course/?tracking_source=trainings-footer-data-science-sp"
+                               style="">
+                                Statistics for Data Science
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/data-science-specialization/?tracking_source=trainings-footer-data-science-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Data Science Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a5">
+                    <div class="menu-heading">
+                        <p>Design</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/ui-ux-design-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                UI/UX Design
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/graphic-design-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Graphic Design
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/video-editing-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Video Editing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/animation-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Animation
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/digital-art-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Digital Art
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/wordpress-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                WordPress
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/colour-theory-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Colour Theory for Designers
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/adobe-illustrator-course/?tracking_source=trainings-footer-design-sp"
+                               style="">
+                                Adobe Illustrator
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a6">
+                    <div class="menu-heading">
+                        <p>Creative Arts</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/creative-writing-course/?tracking_source=trainings-footer-creative-arts-sp"
+                               style="">
+                                Creative Writing
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/photography-course/?tracking_source=trainings-footer-creative-arts-sp"
+                               style="">
+                                Photography
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/guitar-course/?tracking_source=trainings-footer-creative-arts-sp"
+                               style="">
+                                Guitar
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/calligraphy-course/?tracking_source=trainings-footer-creative-arts-sp"
+                               style="">
+                                Calligraphy
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/acting-course/?tracking_source=trainings-footer-creative-arts-sp"
+                               style="">
+                                Acting
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a7">
+                    <div class="menu-heading">
+                        <p>Language</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/french-course/?tracking_source=trainings-footer-language-sp"
+                               style="">
+                                French Language
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a8">
+                    <div class="menu-heading">
+                        <p>Career Development</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/business-communication-course/?tracking_source=trainings-footer-career-development-sp"
+                               style="">
+                                Business Communication Skills
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/ppt-course/?tracking_source=trainings-footer-career-development-sp"
+                               style="">
+                                Internship &amp; Job Preparation
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/how-to-ace-coding-interviews-course/?tracking_source=trainings-footer-career-development-sp"
+                               style="">
+                                How to Ace Coding Interviews
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/quantitative-aptitude-course/?tracking_source=trainings-footer-career-development-sp"
+                               style="">
+                                Quantitative Aptitude
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a9">
+                    <div class="menu-heading">
+                        <p>Architecture</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/autocad-course/?tracking_source=trainings-footer-architecture-sp"
+                               style="">
+                                AutoCAD
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/revit-course/?tracking_source=trainings-footer-architecture-sp"
+                               style="">
+                                Revit
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/autocad-three-d-course/?tracking_source=trainings-footer-architecture-sp"
+                               style="">
+                                AutoCAD 3D
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-footer d-none d-lg-block a10">
+                    <div class="menu-heading">
+                        <p>Specializations</p>
+                    </div>
+                    <div class="items">
+                        <div>
+                            <a href="/full-stack-web-development-specialization/?tracking_source=trainings-footer-specializations-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Full Stack Development Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/data-science-specialization/?tracking_source=trainings-footer-specializations-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Data Science Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/human-resource-management-specialization/?tracking_source=trainings-footer-specializations-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Human Resource Management Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/digital-marketing-specialization/?tracking_source=trainings-footer-specializations-sp"
+                               style="display:flex; align-items: flex-end; justify-content:space-between;">
+                                Digital Marketing Specialization
+                                <span class="tag tag-xs" style="margin-bottom: 3px;">NEW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div id="footer-bottom">
+                <div class="item_a">
+                    <a href="https://internshala.com/refund_cancellation_policy" target="_blank">Refund Policy</a>
+                </div>
+                <div class="item_b">
+                    <a href="/help_center">Help Center</a>
+                </div>
+                <div class="item_c">
+                    <a href="https://docs.google.com/forms/d/1X383Hc0A4iKhOscCZTIfO8DakeNQK9D9qAqCBzl_Ugk/viewform"
+                       target="_blank">Become our Training Partner</a>
+                </div>
+                <div class="item_h">
+                    <a href="/IST-practicals/?utm_source=ist_footer&utm_campaign=ist_footer" target="_blank">IST
+                        Practicals</a>
+                </div>
+                <div class="item_e">
+                    <a href="https://internshala.com/terms#student" target="_blank">Terms & Conditions</a>
+                </div>
+                <div class="item_f">
+                    <a href="https://internshala.com/privacy" target="_blank">Privacy Policy</a>
+                </div>
+                <div class="item_g">
+                    <a href="https://internshala.com/" target="_blank">Internshala</a>
+                </div>
+                <div class="item_d">
+                    <div class="instagram_icon">
+                        <a href="https://www.instagram.com/internshalatrainings_official/" target="_blank"><img
+                                src="/static/images/footerIcon/instagram.png" alt="HTML tutorial"
+                                style="width:24px;height:24px;"></a>
+                    </div>
+                    <div class="linekdin_icon">
+                        <a href="https://www.linkedin.com/showcase/internshala-trainings/" target="_blank"><img
+                                src="/static/images/footerIcon/linkedin.png" alt="HTML tutorial"
+                                style="width:24px;height:24px;"></a>
+                    </div>
+                    <div class="youtube_icon">
+                        <a href="https://www.youtube.com/channel/UC97qxGRmPsyfV0Miz7AxU2A" target="_blank"><img
+                                src="/static/images/footerIcon/youtube.png" alt="HTML tutorial"
+                                style="width:24px;height:24px;"></a>
+                    </div>
+                </div>
+                <div class="flex-break d-none d-md-block"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
