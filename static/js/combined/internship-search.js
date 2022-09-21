@@ -2116,7 +2116,7 @@ function updatePreferenceClickCheckboxData(from_modal) {
 		$("#keyword_search_form_mobile").addClass("transparent");
 		$(".checkmark").css("cursor", "default")
 	} else {
-		searchedUrl = get_final_url("./internship-search.1660711313.js");
+		searchedUrl = get_final_url("./internship-search.js");
 		searchCriteriasMobile();
 		showSearchFiltersModal(false, false);
 		toShowMatchingPreferences = 0;
@@ -2794,7 +2794,7 @@ function applyFilters() {
 	if (remote_job !== "" && internship_checkbox !== "") is_wfh_url = true;
 	create_tags();
 	reset_form_validations("keyword_search_form_mobile");
-	search_url = get_final_url("./internship-search.1660711313.js");
+	search_url = get_final_url("./internship-search.js");
 	search_mobile(search_url, ifw, fresher_jobs, is_wfh_url)
 }
 
@@ -2802,7 +2802,7 @@ function jsUcfirst(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-function campaign_get_final_url("./internship-search.1660711313.js") {
+function campaign_get_final_url("./internship-search.js") {
 	$("#keywords_mobile").val("");
 	hideSearchFiltersModal(false);
 	var part_time = filter_types.part_time.length !== 0 ? filter_types.part_time[0] : "";
@@ -2832,8 +2832,8 @@ function campaign_get_final_url("./internship-search.1660711313.js") {
 	return args.join("/")
 }
 
-function get_final_url("./internship-search.1660711313.js") {
-	if (from_campaign()) return campaign_get_final_url("./internship-search.1660711313.js");
+function get_final_url("./internship-search.js") {
+	if (from_campaign()) return campaign_get_final_url("./internship-search.js");
 	var category_location_url = "";
 	var duration_url = "";
 	var search_url = "";
@@ -3139,7 +3139,7 @@ function onChangeSearchFilters() {
 		var category = getValueInStringFromMultiChosen("#categoryOptions_mobile  .chosen-select");
 		filter_types.keyword.length = 0;
 		updateFiltersObject("category", category);
-		searchedUrl = get_final_url("./internship-search.1660711313.js");
+		searchedUrl = get_final_url("./internship-search.js");
 		searchCriteriasMobile();
 		showSearchFiltersModal(false, false)
 	});
@@ -3157,7 +3157,7 @@ function onChangeSearchFilters() {
 			$("#remote_check_box_label").html("Work from home")
 		}
 		updateFiltersObject("city", city);
-		searchedUrl = get_final_url("./internship-search.1660711313.js");
+		searchedUrl = get_final_url("./internship-search.js");
 		searchCriteriasMobile();
 		showSearchFiltersModal(false,
 			false)
