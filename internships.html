@@ -1,55 +1,49 @@
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./star.png">
+    <meta charset="utf-8"/>
+    <link href="./star.png" rel="icon"/>
     <title>Internstars | Thực tập</title>
-
-    <link rel="preload" as="font" href="static/fonts/Inter_v_3.11.woff2.bin" type="font/woff2">
-    <link rel="preload" as="font" href="static/fonts/internshala-icons_nb9ica.woff2.bin" type="font/woff2">
+    <link as="font" href="static/fonts/Inter_v_3.11.woff2.bin" rel="preload" type="font/woff2"/>
+    <link as="font" href="static/fonts/internshala-icons_nb9ica.woff2.bin" rel="preload" type="font/woff2"/>
     <script src="static/js/web_vitals/web-vitals.umd.js"></script>
-    <script src="static/js/includes/common/libraries.js" defer></script>
-    <link rel="stylesheet" href="static/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="static/css/internship/search/search.css" rel="stylesheet" type="text/css">
-    <script src="static/js/combined/common_form_1.js" defer type="text/javascript"></script>
-    <script src="static/js/includes/lottie_light.js" defer type="text/javascript"></script>
-    <script src="static/js/combined/internship-search.js" defer type="text/javascript"></script>
-    <script src="static/js/subscribe/popup.js" defer type="text/javascript"></script>
+    <script defer="" src="static/js/includes/common/libraries.js"></script>
+    <link href="static/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="static/css/internship/search/search.css" rel="stylesheet" type="text/css"/>
+    <script defer="" src="static/js/combined/common_form_1.js" type="text/javascript"></script>
+    <script defer="" src="static/js/includes/lottie_light.js" type="text/javascript"></script>
+    <script defer="" src="static/js/combined/internship-search.js" type="text/javascript"></script>
+    <script defer="" src="static/js/subscribe/popup.js" type="text/javascript"></script>
 </head>
-
 <body>
 <div id="wrapper">
-    <div id="header" class="header_container container-fluid">
+    <div class="header_container container-fluid" id="header">
         <div class="max-width-container">
             <div class="layer"></div>
             <nav class="navbar navbar-expand-md">
                 <div class="brand_container">
-                    <a class="navbar-brand" href="./index.html">
-                        <img src="static/images/home/internships/categories/internstarslogotrans.png">
+                    <a class="navbar-brand" href="#">
+                        <img src="static/images/home/internships/categories/internstarslogotrans.png"/>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse navbar_desktop">
                     <ul class="navbar-nav nav_menu_container">
-
                         <li class="nav-item dropdown dropdown-hover">
-                            <a class="nav-link dropdown-toggle">Đăng nhập / Đăng ký <i
+                            <a class="nav-link dropdown-toggle" href="#">Đăng nhập / Đăng ký <i
                                     class="is_icon_header ic-24-filled-down-arrow"></i></a>
-
                             <div class="dropdown-menu dropdown-menu-center menu_dropdown" id="login_register-dropdown">
                                 <div class="dropdown-inner">
                                     <div class="dropdown-inner-container">
                                         <div class="inner-dropdown">
                                             <ul class="dropdown-menu-part profile-dropdown">
                                                 <li class="item">
-                                                    <a href="/registration/student" id="header_registration_link"
-                                                       class="item_link">Đăng ký tài khoản sinh viên</a>
+                                                    <a class="item_link" href="#" id="header_registration_link">Đăng ký
+                                                        tài khoản sinh viên</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a href="/registration/employer?utm_campaign=employer_searchpage"
-                                                       class="item_link">Đăng ký tài khoản nhà tuyển dụng</a>
+                                                    <a class="item_link" href="#">Đăng ký tài khoản nhà tuyển dụng</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a id="header_login_modal_button" data-toggle="modal"
-                                                       data-target="#login-modal" class="item_link">Đăng nhập</a>
-
+                                                    <a class="item_link" data-target="#login-modal" data-toggle="modal"
+                                                       href="#" id="header_login_modal_button">Đăng nhập</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -60,100 +54,95 @@
                     </ul>
                 </div>
             </nav>
-
         </div>
     </div>
-
-    <div id="content" class="search_content">
+    <div class="search_content" id="content">
         <div class="container-fluid" id="internships_list_container">
             <div class="max-width-container">
-                <div id="internship_seo_heading_container" class="internship_seo_heading_container_desktop  ">
-                    <h1 class="heading heading_4_6">126 kết quả tìm kiếm <i class="ic-16-chevron-down"></i></h1>
+                <div class="internship_seo_heading_container_desktop" id="internship_seo_heading_container">
+                    <h1 class="heading heading_4_6">1 kết quả tìm kiếm <i class="ic-16-chevron-down"></i></h1>
                 </div>
                 <div id="reference">
                     <div id="search_criteria_container">
-
                         <div class="fixed_on_scroll" id="filters_container">
-
                             <div id="filters">
                                 <div class="form-container">
                                     <div class="filterUi">
-                                        <i id="filter_ui_icon_desktop" class="ic-16-filter"></i>
-                                        <span id="filter_ui_heading_desktop" class="heading_5">Bộ lọc</span>
+                                        <i class="ic-16-filter" id="filter_ui_icon_desktop"></i>
+                                        <span class="heading_5" id="filter_ui_heading_desktop">Bộ lọc</span>
                                     </div>
-
-                                    <form role="form" id="search_form" method="POST">
-                                        <div class="category_container form-group ">
-                                            <label for="select_category" class="control-label">Chuyên ngành</label>
+                                    <form id="search_form" method="POST" role="form">
+                                        <div class="category_container form-group">
+                                            <label class="control-label" for="select_category">Chuyên ngành</label>
                                             <div id="categoryOptions">
-                                                
                                                 <div class="chosen-container chosen-container-multi chosen-with-drop"
-                                                     title="" id="select_category_chosen_temp">
+                                                     id="select_category_chosen_temp" title="">
                                                     <ul class="chosen-choices">
                                                         <li class="search-field">
-                                                            <input class="chosen-search-input default" type="text"
-                                                                   autocomplete="off" 
-                                                                   tabindex="4" style="width: 119px;">
+                                                            <input autocomplete="off"
+                                                                   class="chosen-search-input default"
+                                                                   style="width: 119px;" tabindex="4" type="text"/>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="location_filter" class="location_container form-group "
-                                             data-container="body" data-toggle="popover" data-placement="bottom"
+                                        <div class="location_container form-group" data-container="body"
                                              data-content="&lt;div style='width:160px; font-size:12px;' class='data_content'&gt;Click here to change location&lt;/div&gt;"
-                                             data-template='&lt;div class="popover location-filters-popover" style="background-color:#1295c9; color:#fff;"&gt;&lt;div class="arrow" style="left:14% !important"&gt;&lt;/div&gt;&lt;div class="popover-inner"&gt;&lt;div class="popover-content"&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'>
-                                            <label for="city_sidebar" class="control-label">Địa điểm</label>
+                                             data-placement="bottom"
+                                             data-template='&lt;div class="popover location-filters-popover" style="background-color:#1295c9; color:#fff;"&gt;&lt;div class="arrow" style="left:14% !important"&gt;&lt;/div&gt;&lt;div class="popover-inner"&gt;&lt;div class="popover-content"&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;'
+                                             data-toggle="popover" id="location_filter">
+                                            <label class="control-label" for="city_sidebar">Địa điểm</label>
                                             <div id="cityOptions">
                                                 <div class="chosen-container chosen-container-multi chosen-with-drop"
-                                                     title="" id="city_sidebar_chosen_temp">
+                                                     id="city_sidebar_chosen_temp" title="">
                                                     <ul class="chosen-choices">
                                                         <li class="search-field">
-                                                            <input class="chosen-search-input default" type="text"
-                                                                   autocomplete="off" tabindex="4"
-                                                                   style="width: 119px;">
+                                                            <input autocomplete="off"
+                                                                   class="chosen-search-input default"
+                                                                   style="width: 119px;" tabindex="4" type="text"/>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="filters_checkboxes_containers ">
+                                        <div class="filters_checkboxes_containers">
                                             <div class="form-group flex-row">
                                                 <div class="checkbox">
-                                                    <input type="checkbox" class="" name="work_from_home"
-                                                           id="work_from_home">
+                                                    <input class="" id="work_from_home" name="work_from_home"
+                                                           type="checkbox"/>
                                                     <label class="" for="work_from_home">Làm việc từ xa</label>
                                                 </div>
                                             </div>
                                             <div class="form-group flex-row" id="part_time_check_box">
                                                 <div class="checkbox">
-                                                    <input type="checkbox" id="part_time" name="part_time">
+                                                    <input id="part_time" name="part_time" type="checkbox"/>
                                                     <label class="" for="part_time">Part-time</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group stipend_filter_container" id="stipend_filter_container">
                                             <label>Mức lương tối thiểu ($)</label>
-                                            <input type="range" min="0" max="12100" value="0" step="1" class="slider"
-                                                   id="stipend_filter"
-                                                   style="background: linear-gradient(to right, #dddddd 0%, #dddddd 0%, #258a48 0%, #258a48 100%)">
-                                            <div id="stipend_values_container" class="stipend_values_container">
+                                            <input class="slider" id="stipend_filter" max="12100" min="0" step="1"
+                                                   style="background: linear-gradient(to right, #dddddd 0%, #dddddd 0%, #258a48 0%, #258a48 100%)"
+                                                   type="range" value="0"/>
+                                            <div class="stipend_values_container" id="stipend_values_container">
                                                 <div class="stipend_value small-text value_0 selected_stipend_value">
                                                     0
                                                 </div>
-                                                <div class="stipend_value small-text value_2000 ">
+                                                <div class="stipend_value small-text value_2000">
                                                     2K
                                                 </div>
-                                                <div class="stipend_value small-text value_4000 ">
+                                                <div class="stipend_value small-text value_4000">
                                                     4K
                                                 </div>
-                                                <div class="stipend_value small-text value_6000 ">
+                                                <div class="stipend_value small-text value_6000">
                                                     6K
                                                 </div>
-                                                <div class="stipend_value small-text value_8000 ">
+                                                <div class="stipend_value small-text value_8000">
                                                     8K
                                                 </div>
-                                                <div class="stipend_value small-text value_10000 ">
+                                                <div class="stipend_value small-text value_10000">
                                                     10K
                                                 </div>
                                                 <div class="stipend_value value_last"></div>
@@ -172,35 +161,30 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                    
                                             <div class="filters_checkboxes_containers">
                                                 <div class="form-group flex-row">
                                                     <div class="checkbox flex-row">
-                                                        <input type="checkbox" id="ppo" name="ppo" value="">
+                                                        <input id="ppo" name="ppo" type="checkbox" value=""/>
                                                         <label for="ppo"></label>
-                                                        <div id="internships_ppo_container"
-                                                             class="internships_for_women_container flex-row">
+                                                        <div class="internships_for_women_container flex-row"
+                                                             id="internships_ppo_container">
                                                             <label for="ppo">Thực tập với đề nghị việc làm</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group flex-row">
                                                     <div class="checkbox flex-row">
-                                                        <input type="checkbox" id="fast_response_input"
-                                                               name="fast_response">
+                                                        <input id="fast_response_input" name="fast_response"
+                                                               type="checkbox"/>
                                                         <label for="fast_response_input"></label>
-                                                        <div id="fast_response_container"
-                                                             class="internships_for_women_container flex-row">
+                                                        <div class="internships_for_women_container flex-row"
+                                                             id="fast_response_container">
                                                             <label for="fast_response_input">Phản hồi nhanh</label>
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
-                                                
                                             </div>
                                         </div>
-                                        
                                     </form>
                                 </div>
                             </div>
@@ -210,48 +194,43 @@
                         <div class="internship_list_container" id="marketing_first_container"></div>
                         <div class="internship_list_container" id="internship_list_container">
                             <div id="internship_list_container_1">
-                                <div class="container-fluid individual_internship visibilityTrackerItem "
+                                <div class="container-fluid individual_internship visibilityTrackerItem"
                                      id="individual_internship_1890877" internshipid="1890877">
                                     <div class="internship_meta">
                                         <div class="individual_internship_header">
                                             <div class="company">
                                                 <div class="heading_4_5 profile">
-                                                    <a class="view_detail_button"
-                                                       href="/internship/detail/teaching-part-time-job-internship-at-multiple-locations-in-nerdy-academy1660664009">Lập trình C#</a>
+                                                    <a class="view_detail_button" href="#">Lập trình C#</a>
                                                 </div>
                                                 <div class="heading_6 company_name">
                                                     <div class="company_and_premium">
-                                                        <a class="link_display_like_text view_detail_button"
-                                                           href="/internships/internship-at-Nerdy%20Academy">
+                                                        <a class="link_display_like_text view_detail_button" href="#">
                                                             Công ty cổ phần CORP </a>
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="internship_logo">
                                             </div>
                                         </div>
-                                        <div class="individual_internship_details  individual_internship_internship">
+                                        <div class="individual_internship_details individual_internship_internship">
                                             <div id="location_names">
                                                 <i class="ic-16-map-pin"></i>
                                                 <span>
-                    <a class="location_link view_detail_button" href="/internships/internship-in-bhilai">Hà Nội</a>             </span>
+<a class="location_link view_detail_button" href="#">Hà Nội</a> </span>
                                             </div>
                                             <div class="internship_other_details_container">
                                                 <div class="other_detail_item_row">
-                                                    <div class="other_detail_item ">
+                                                    <div class="other_detail_item">
                                                         <div class="item_heading">
                                                             <i class="ic-16-play-circle"></i>
                                                             <span>
                                 Ngày bắt đầu                           </span>
                                                         </div>
                                                         <div class="item_body" id="start-date-first">
-                                                            <span
-                                                                class="start_immediately_desktop">Ngay lập tức</span>
+                                                            <span class="start_immediately_desktop">Ngay lập tức</span>
                                                         </div>
                                                     </div>
-
-                                                    <div class="other_detail_item ">
+                                                    <div class="other_detail_item">
                                                         <div class="item_heading">
                                                             <i class="ic-16-calendar"></i>
                                                             <span>Thời gian thực tập</span>
@@ -261,458 +240,388 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="other_detail_item_row">
-                                                    <div class="other_detail_item  stipend_container">
+                                                    <div class="other_detail_item stipend_container">
                                                         <div class="item_heading">
                                                             <i class="ic-16-money"></i>
                                                             <span>
                                 Lương                           </span>
                                                         </div>
                                                         <div class="item_body">
-                                                            <span class="stipend"></i> 7,000$-25,000$ /tháng</span>
+                                                            <span class="stipend"> 7,000$-25,000$ /tháng</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
                                     </div>
-                                    <div class="button_container ">
+                                    <div class="button_container">
                                         <div class="tags_container">
                                             <div class="status-container">
                                                 <div class="status status-small status-inactive"><i
                                                         class="ic-16-reschedule"></i>1 tuần trước
                                                 </div>
                                             </div>
-                                            <div class="status-container status-container-desktop  ">
-                                                <div class="status status-small status-inactive">Thực tập với đề nghị việc làm
+                                            <div class="status-container status-container-desktop">
+                                                <div class="status status-small status-inactive">Thực tập với đề nghị
+                                                    việc làm
                                                 </div>
                                             </div>
-                                            <div class="status-container status-container-desktop  ">
+                                            <div class="status-container status-container-desktop">
                                                 <div class="status status-small status-inactive">Part-time</div>
                                             </div>
                                         </div>
-                                        <a class="view_detail_button"
-                                           href="/internship/detail/teaching-part-time-job-internship-at-multiple-locations-in-nerdy-academy1660664009">
+                                        <a class="view_detail_button" href="#">
                                             <div>Xem chi tiết</div>
                                             <i class="ic-16-s15-chevron-right"></i>
                                         </a>
                                     </div>
-
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </div>
-
-    <div id="footer" class="generic_footer" data-custom-attribute="footer_custom_value">
-        <div class="container-fluid">
-            <div class="max-width-container">
-                <div class="footer_container">
-                    <div class="footer-column desktop-footer" id="internship_by_place">
-                        <div class="footer-list">
-                            <h5>Thực tập theo địa điểm</h5>
-                            <div class="footer-list-item">
-                                <a href="/internships">Thực tập ở India</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-delhi">Thực tập ở Delhi</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-bangalore">Thực tập ở Bangalore</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-hyderabad">Thực tập ở Hyderabad</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-mumbai">Thực tập ở Mumbai</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-chennai">Thực tập ở Chennai</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-gurgaon">Thực tập ở Gurgaon</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/internship-in-kolkata">Thực tập ở Kolkata</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/work-from-home-internships">Thực tập ảo</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=" footer-column desktop-footer" id="internship_by_stream">
-                        <div class="footer-list">
-                            <h5>Thực tập theo luồng</h5>
-                            <div class="footer-list-item">
-                                <a href="/internships/computer-science-internship">Thực tập Khoa học Máy tính</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/electronics-internship">Thực tập Điện tử</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/mechanical-internship">Mechanical Internship</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/civil-internship">Thực tập dân sự</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/marketing%2Fsales-internship">Thực tập tiếp thị</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/chemical-internship">Thực tập hóa chất</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/finance-internship">Thực tập tài chính</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/summer-research-fellowship-internship">Học bổng Nghiên cứu Mùa hè</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/internships/campus-ambassador-internship?utm_medium=footer">Chương trình tìm kiếm đội ngũ Đại sứ Sinh viên</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" footer-column desktop-footer desktop-footer-1255-hide" id="jobs_by_places">
-                        <div class="footer-list">
-                            <h5>Việc làm theo địa điểm</h5>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-delhi?utm_source=is_footer"
-                                   target="_blank" rel="noopener">công việc trong Delhi</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-mumbai?utm_source=is_footer"
-                                   target="_blank" rel="noopener">công việc trong Mumbai</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-bangalore?utm_source=is_footer"
-                                   target="_blank" rel="noopener">công việc trong Bangalore</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-jaipur?utm_source=is_footer"
-                                   target="_blank" rel="noopener">công việc trong Jaipur</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-kolkata?utm_source=is_footer"
-                                   target="_blank" rel="noopener">công việc trong Kolkata</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" footer-column desktop-footer desktop-footer-1255-hide" id="jobs_by_stream">
-                        <div class="footer-list">
-                            <h5>Việc làm theo Luồng</h5>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/marketing%2Fsales-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc tiếp thị</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/content-writing-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc viết nội dung</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/web-development-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc phát triển web</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/sales-jobs?utm_source=is_footer" target="_blank"
-                                   rel="noopener">Công việc bán hàng</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/finance-jobs?utm_source=is_footer" target="_blank"
-                                   rel="noopener">Công việc tài chính</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" footer-column desktop-footer" id="trainings-container">
-                        <div class="footer-list">
-                            <h5>
-                                <div id="trainings-footer">
-                                    <a href="https://trainings.internshala.com/?utm_source=is_web_is-footer"
-                                       target="_blank" rel="noopener">Đào tạo trực tuyến <span
-                                            class="offer">80% OFF</span>
-                                    </a>
+        <div class="generic_footer" data-custom-attribute="footer_custom_value" id="footer">
+            <div class="container-fluid">
+                <div class="max-width-container">
+                    <div class="footer_container">
+                        <div class="footer-column desktop-footer" id="internship_by_place">
+                            <div class="footer-list">
+                                <h5>Thực tập theo địa điểm</h5>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở India</a>
                                 </div>
-                            </h5>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/web-development-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Phát triển web</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/python-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Lập trình với Python</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/digital-marketing-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Tiếp thị kỹ thuật số</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/machine-learning-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Học máy</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/excel-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Excel nâng cao</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/autocad-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">AutoCAD</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/data-science-beginner-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Khoa học dữ liệu</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/c-plus-plus-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Lập trình với C và C++</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://trainings.internshala.com/financial-modeling-valuation-course/?utm_source=is_web_is-footer"
-                                   target="_blank" rel="noopener">Mô hình tài chính và định giá</a>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Delhi</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Bangalore</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Hyderabad</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Mumbai</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Chennai</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Gurgaon</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ở Kolkata</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập ảo</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="footer-column" id="online-training-container">
-                        <div class="footer-list">
-                            <a id="online-training-heading-mobile"
-                               href="https://trainings.internshala.com/?utm_source=is_web_is-footer" target="_blank"
-                               rel="noopener"><h5>Đào tạo trực tuyến <span class="offer">80% OFF</span>
-                            </h5>
-                            </a>
-
-                            <div class="footer-training-container">
-                                <div id="trainings_internshala_left">
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/web-development-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Phát triển web</a>
-                                    </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/python-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Lập trình với Python</a>
-                                    </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/digital-marketing-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Tiếp thị kỹ thuật số</a>
-                                    </div>
+                        <div class="footer-column desktop-footer" id="internship_by_stream">
+                            <div class="footer-list">
+                                <h5>Thực tập theo luồng</h5>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập Khoa học Máy tính</a>
                                 </div>
-                                <div id="trainings_internshala_center">
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/machine-learning-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Học máy</a>
-                                    </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/excel-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Excel nâng cao</a>
-                                    </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/autocad-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">AutoCAD</a>
-                                    </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập Điện tử</a>
                                 </div>
-                                <div id="trainings_internshala_right">
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/data-science-beginner-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Khoa học dữ liệu</a>
+                                <div class="footer-list-item">
+                                    <a href="#">Mechanical Internship</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập dân sự</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập tiếp thị</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập hóa chất</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thực tập tài chính</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Học bổng Nghiên cứu Mùa hè</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Chương trình tìm kiếm đội ngũ Đại sứ Sinh viên</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column desktop-footer desktop-footer-1255-hide" id="jobs_by_places">
+                            <div class="footer-list">
+                                <h5>Việc làm theo địa điểm</h5>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">công việc trong Delhi</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">công việc trong Mumbai</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">công việc trong Bangalore</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">công việc trong Jaipur</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">công việc trong Kolkata</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column desktop-footer desktop-footer-1255-hide" id="jobs_by_stream">
+                            <div class="footer-list">
+                                <h5>Việc làm theo Luồng</h5>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc tiếp thị</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc viết nội dung</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc phát triển web</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc bán hàng</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc tài chính</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column desktop-footer" id="trainings-container">
+                            <div class="footer-list">
+                                <h5>
+                                    <div id="trainings-footer">
+                                        <a href="#" rel="noopener" target="_blank">Đào tạo trực tuyến <span
+                                                class="offer">80% OFF</span>
+                                        </a>
                                     </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/c-plus-plus-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Lập trình với C và C ++</a>
+                                </h5>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Phát triển web</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Lập trình với Python</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Tiếp thị kỹ thuật số</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Học máy</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Excel nâng cao</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">AutoCAD</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Khoa học dữ liệu</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Lập trình với C và C++</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Mô hình tài chính và định giá</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-column" id="online-training-container">
+                            <div class="footer-list">
+                                <a href="#" id="online-training-heading-mobile" rel="noopener" target="_blank"><h5>Đào
+                                    tạo trực tuyến <span class="offer">80% OFF</span>
+                                </h5>
+                                </a>
+                                <div class="footer-training-container">
+                                    <div id="trainings_internshala_left">
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Phát triển web</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Lập trình với Python</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Tiếp thị kỹ thuật số</a>
+                                        </div>
                                     </div>
-
-                                    <div class="footer-list-item">
-                                        <a href="https://trainings.internshala.com/financial-modeling-valuation-course/?utm_source=is_web_is-footer"
-                                           target="_blank" rel="noopener">Mô hình tài chính và định giá</a>
+                                    <div id="trainings_internshala_center">
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Học máy</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Excel nâng cao</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">AutoCAD</a>
+                                        </div>
+                                    </div>
+                                    <div id="trainings_internshala_right">
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Khoa học dữ liệu</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Lập trình với C và C ++</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" rel="noopener" target="_blank">Mô hình tài chính và định giá</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <div class="footer-column desktop-footer-1255" id="about-us-container">
-                        <div class="footer-list">
-                            <h5 class="d-none d-lg-block">Về Internshala</h5>
-                            <div class="footer-link-conatiner">
-                                <div id="about_internshala_left">
-                                    <div class="footer-list-item">
-                                        <a href="/about_us">Về chúng tôi</a>
+                        <div class="footer-column desktop-footer-1255" id="about-us-container">
+                            <div class="footer-list">
+                                <h5 class="d-none d-lg-block">Về Internshala</h5>
+                                <div class="footer-link-conatiner">
+                                    <div id="about_internshala_left">
+                                        <div class="footer-list-item">
+                                            <a href="#">Về chúng tôi</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#">Chúng tôi đang tuyển dụng</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#">Thuê thực tập cho công ty bạn</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" target="_blank">Nhật ký nhóm</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#" target="_blank">Blog</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#">Dịch vụ của chúng tôi</a>
+                                        </div>
                                     </div>
-                                    <div class="footer-list-item">
-                                        <a href="/careers">Chúng tôi đang tuyển dụng</a>
+                                    <div id="about_internshala_center">
+                                        <div class="footer-list-item">
+                                            <a href="#">Điều khoản &amp;&amp;; Các điều kiện</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#">Riêng tư</a>
+                                        </div>
+                                        <div class="footer-list-item">
+                                            <a href="#">Liên hệ chúng tôi</a>
+                                        </div>
                                     </div>
-                                    <div class="footer-list-item">
-                                        <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập cho công ty bạn</a>
-                                    </div>
-                                    <div class="footer-list-item">
-                                        <a href="http://blog.internshala.com/internshala-editorials/team-diary/"
-                                           target="_blank">Nhật ký nhóm</a>
-                                    </div>
-                                    <div class="footer-list-item">
-                                        <a href="https://blog.internshala.com/?utm_source=IS_footer" target="_blank">Blog</a>
-                                    </div>
-                                    <div class="footer-list-item">
-                                        <a href="/products_services">Dịch vụ của chúng tôi</a>
-                                    </div>
+                                    <div id="about_internshala_right"></div>
                                 </div>
-                                <div id="about_internshala_center">
-                                    <div class="footer-list-item">
-                                        <a href="/terms">Điều khoản &&; Các điều kiện</a>
-                                    </div>
-                                    <div class="footer-list-item">
-                                        <a href="/privacy">Riêng tư</a>
-                                    </div>
-                                    <div class="footer-list-item">
-                                        <a href="/contact">Liên hệ chúng tôi</a>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer-middle-section">
+                        <div class="footer-column desktop-footer-1255" id="jobs_by_places">
+                            <div class="footer-list">
+                                <h5>Việc làm theo địa điểm</h5>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Việc làm trong Delhi</a>
                                 </div>
-                                <div id="about_internshala_right"></div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Việc làm trong Mumbai</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Việc làm trong Bangalore</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Việc làm trong Jaipur</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Việc làm trong Kolkata</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div id="footer-middle-section">
-                    <div class=" footer-column desktop-footer-1255" id="jobs_by_places">
-                        <div class="footer-list">
-                            <h5>Việc làm theo địa điểm</h5>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-delhi?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Việc làm trong Delhi</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-mumbai?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Việc làm trong Mumbai</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-bangalore?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Việc làm trong Bangalore</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-jaipur?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Việc làm trong Jaipur</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/jobs-in-kolkata?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Việc làm trong Kolkata</a>
+                        <div class="footer-column desktop-footer-1255" id="jobs_by_stream">
+                            <div class="footer-list">
+                                <h5>Việc làm theo Luồng</h5>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc tiếp thị</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc viết nội dung</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc phát triển web</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc bán hàng</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" rel="noopener" target="_blank">Công việc tài chính</a>
+                                </div>
                             </div>
                         </div>
+                        <div id="trainings-container"></div>
+                        <div id="dummy-container"></div>
                     </div>
-
-                    <div class=" footer-column desktop-footer-1255" id="jobs_by_stream">
-                        <div class="footer-list">
-                            <h5>Việc làm theo Luồng</h5>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/marketing%2Fsales-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc tiếp thị</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/content-writing-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc viết nội dung</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/web-development-jobs?utm_source=is_footer"
-                                   target="_blank" rel="noopener">Công việc phát triển web</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/sales-jobs?utm_source=is_footer" target="_blank"
-                                   rel="noopener">Công việc bán hàng</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://internshala.com/jobs/finance-jobs?utm_source=is_footer" target="_blank"
-                                   rel="noopener">Công việc tài chính</a>
+                    <div id="footer-about-us-container">
+                        <div class="footer-column" id="about_internshala_left">
+                            <div class="footer-list">
+                                <div class="footer-list-item">
+                                    <a href="#">Về chúng tôi</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Chúng tôi đang tuyển dụng</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Thuê thực tập sinh cho công ty của bạn</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="trainings-container"></div>
-                    <div id="dummy-container"></div>
-                </div>
-                <div id="footer-about-us-container">
-                    <div class="footer-column" id="about_internshala_left">
-                        <div class="footer-list">
-                            <div class="footer-list-item">
-                                <a href="/about_us">Về chúng tôi</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/careers">Chúng tôi đang tuyển dụng</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập sinh cho công ty của bạn</a>
+                        <div class="footer-column" id="about_internshala_center">
+                            <div class="footer-list">
+                                <div class="footer-list-item">
+                                    <a href="#" target="_blank">Nhật ký nhóm</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#" target="_blank">Blog</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Dịch vụ của chúng tôi</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="footer-column" id="about_internshala_center">
-                        <div class="footer-list">
-                            <div class="footer-list-item">
-                                <a href="http://blog.internshala.com/internshala-editorials/team-diary/"
-                                   target="_blank">Nhật ký nhóm</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="https://blog.internshala.com/?utm_source=IS_footer" target="_blank">Blog</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/products_services">Dịch vụ của chúng tôi</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-column" id="about_internshala_right">
-                        <div class="footer-list">
-                            <div class="footer-list-item">
-                                <a href="/terms">Điều khoản && Các điều kiện</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/privacy">Riêng tư</a>
-                            </div>
-                            <div class="footer-list-item">
-                                <a href="/contact">Liên hệ chúng tôi</a>
+                        <div class="footer-column" id="about_internshala_right">
+                            <div class="footer-list">
+                                <div class="footer-list-item">
+                                    <a href="#">Điều khoản &amp;&amp; Các điều kiện</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Riêng tư</a>
+                                </div>
+                                <div class="footer-list-item">
+                                    <a href="#">Liên hệ chúng tôi</a>
+                                </div>
                             </div>
                         </div>
+                        <div id="dummy-container-1"></div>
+                        <div id="dummy-container-2"></div>
                     </div>
-                    <div id="dummy-container-1"></div>
-                    <div id="dummy-container-2"></div>
-                </div>
-                <div id="footer-bottom">
-                    <a href="https://play.google.com/store/apps/details?id=com.internshala.app&amp;referrer=utm_source%3Dplay_footer"
-                       target="_blank">
-                        <div class="footer-list-item" id="android_app_container">
-                            <i class="ic-24-playstore"></i> <span>Tải ứng dụng Android</span>
+                    <div id="footer-bottom">
+                        <a href="#" target="_blank">
+                            <div class="footer-list-item" id="android_app_container">
+                                <i class="ic-24-playstore"></i> <span>Tải ứng dụng Android</span>
+                            </div>
+                        </a>
+                        <div id="social_media_container">
+                            <a class="social_media_link_footer" href="#" target="_blank"><i class="ic-24-instagram"></i></a>
+                            <a class="social_media_link_footer" href="#" target="_blank"><i
+                                    class="ic-24-twitter"></i></a>
+                            <a class="social_media_link_footer" href="#" target="_blank"><img class="img-icon"
+                                                                                              src="./static/images/common/yt_icon_mono_dark.png"/></a>
+                            <a class="social_media_link_footer" href="#" target="_blank"><i class="ic-24-linkedin"></i></a>
                         </div>
-                    </a>
-                    <div id="social_media_container">
-                        <a class="social_media_link_footer"
-                           href="https://www.instagram.com/internshala/?utm_source=IS_footer" target="_blank"><i
-                                class="ic-24-instagram"></i></a>
-                        <a class="social_media_link_footer" href="https://twitter.com/Internshala?utm_source=IS_footer"
-                           target="_blank"><i class="ic-24-twitter"></i></a>
-                        <a class="social_media_link_footer"
-                           href="https://www.youtube.com/c/internshalaofficial?utm_source=IS_footer"
-                           target="_blank"><img class="img-icon" src="./static/images/common/yt_icon_mono_dark.png"></a>
-                        <a class="social_media_link_footer"
-                           href="https://www.linkedin.com/company/internshala/?utm_source=is-footer" target="_blank"><i
-                                class="ic-24-linkedin"></i></a>
+                        <div class="" id="copyright">
+                            © Copyright 2022 DangVanLam
+                        </div>
+                        <div class="clear">
+                        </div>
                     </div>
-                    <div class="" id="copyright">
-                        &#169; Copyright 2022 DangVanLam
-                    </div>
-                    <div class="clear">
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
+</body>
