@@ -2297,6 +2297,7 @@
     }
 }
 #header .max-width-container .navbar .brand_container .navbar-brand img{
+    margin-top: 10px;
     width:210px
 }
 #header .max-width-container .navbar .collapse{
