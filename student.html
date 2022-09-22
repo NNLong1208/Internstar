@@ -12,74 +12,76 @@
     <link rel="icon" href="./star.png">
     <title>Internstars | Student Registration</title>
     <link rel="stylesheet" href="static/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="static/css/registration/student/registration.1661420937.css" rel="stylesheet" type="text/css">
-
-
 
 </head>
 <body>
 <div id="wrapper">
-    <div id="header" class="header_container container-fluid">
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal" id="login-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <i aria-hidden="true" class="ic-24-cross"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="user-menu-container">
+                        <div id="user-menu">
+                        </div>
+                    </div>
+                    <form id="modal-login-form" method="POST" role="form">
+                        <input name="csrf_test_name" type="hidden" value="07d4a0539d8f306794bdcf8d040027bb"/>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="modal_email" name="email" tabindex="1" type="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password">Password</label>
+                            <input class="form-control" id="modal_password" name="password" tabindex="2"
+                                   type="password"/>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" id="modal_login_submit" tabindex="3" type="submit">Đăng nhập
+                            </button>
+                        </div>
+                        <div class="form-group new_to_internshala">
+                            <label>
+                                Đăng ký ngay tại đây (<a href="#">Sinh viên</a> / <a href="#">Công ty</a>)
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_container container-fluid" id="header">
         <div class="max-width-container">
             <div class="layer"></div>
             <nav class="navbar navbar-expand-md">
                 <div class="brand_container">
-                    <a class="navbar-brand" href="./index.html">
-                        <img src="static/images/home/internships/categories/internstarslogotrans.png">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="static/images/home/internships/categories/internstarslogotrans.png"/>
                     </a>
                 </div>
-                <div class="collapse navbar-collapse navbar_desktop">
-                    <ul class="navbar-nav nav_menu_container">
-
-                        <li class="nav-item dropdown dropdown-hover">
-                            <a class="nav-link dropdown-toggle">Đăng nhập / Đăng ký <i
-                                    class="is_icon_header ic-24-filled-down-arrow"></i></a>
-
-                            <div class="dropdown-menu dropdown-menu-center menu_dropdown" id="login_register-dropdown">
-                                <div class="dropdown-inner">
-                                    <div class="dropdown-inner-container">
-                                        <div class="inner-dropdown">
-                                            <ul class="dropdown-menu-part profile-dropdown">
-                                                <li class="item">
-                                                    <a href="/registration/student" id="header_registration_link"
-                                                       class="item_link">Đăng ký tài khoản sinh viên</a>
-                                                </li>
-                                                <li class="item">
-                                                    <a href="/registration/employer?utm_campaign=employer_searchpage"
-                                                       class="item_link">Đăng ký tài khoản nhà tuyển dụng</a>
-                                                </li>
-                                                <li class="item">
-                                                    <a id="header_login_modal_button" data-toggle="modal"
-                                                       data-target="#login-modal" class="item_link">Đăng nhập</a>
-
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </nav>
-
         </div>
     </div>
 
-    <div class="container-fluid" id="content">
+    <div class="container-fluid" id="content" style="padding-bottom: 250px;">
         <div id="content-inner">
             <div class="max-width-container">
                 <div id="registration-container">
                     <div id="registration-container-left">
                         <div class="registration-content">
                             <div class="heading_0">
-                                Chuyến  bay miễn phí  đến ước mơ của bạn
+                                Chuyến bay miễn phí đến ước mơ của bạn
                             </div>
                             <h3 class="d-none d-md-block">Đăng ký và áp dụng cho hơn 10000 cơ hội</h3>
                             <div class="features_container">
                                 <div class="feature">
-                                    <i  class="fa-sharp fa-solid fa-circle-check"></i>
+                                    <i class="fa-sharp fa-solid fa-circle-check"></i>
                                     <h4>Thực tập</h4>
                                 </div>
                                 <div class="feature">
@@ -99,9 +101,6 @@
                         <a class="google_login" href="/login/get_google?utm_source=&amp;utm_medium=&amp;utm_campaign=">
 
                             <div id="google-button-container">
-                                <div class="google_image_container">
-                                    <img src="/static/images/login/google_logo.png">
-                                </div>
                                 <div class="google_content">
                                     Đăng ký với Google
                                 </div>
@@ -150,8 +149,9 @@
                                     </div>
                                 </div>
                                 <div id="label_toc">
-                                    Bằng cách đăng ký, bạn đồng ý với<a href="/terms#student" target="_blank"> Điều khoản và
-                                        Các điều kiện</a>.
+                                    Bằng cách đăng ký, bạn đồng ý với<a href="/terms#student" target="_blank"> Điều
+                                    khoản và
+                                    Các điều kiện</a>.
                                 </div>
                                 <button type="submit" class="btn btn-primary" id="registration_submit">Đăng ký</button>
                             </form>
@@ -225,10 +225,12 @@
                                 <a href="/internships/finance-internship">Thực tập tài chính</a>
                             </div>
                             <div class="footer-list-item">
-                                <a href="/internships/summer-research-fellowship-internship">Học bổng Nghiên cứu Mùa hè</a>
+                                <a href="/internships/summer-research-fellowship-internship">Học bổng Nghiên cứu Mùa
+                                    hè</a>
                             </div>
                             <div class="footer-list-item">
-                                <a href="/internships/campus-ambassador-internship?utm_medium=footer">Chương trình tìm kiếm đội ngũ Đại sứ Sinh viên</a>
+                                <a href="/internships/campus-ambassador-internship?utm_medium=footer">Chương trình tìm
+                                    kiếm đội ngũ Đại sứ Sinh viên</a>
                             </div>
                         </div>
                     </div>
@@ -411,7 +413,8 @@
                                         <a href="/careers">Chúng tôi đang tuyển dụng</a>
                                     </div>
                                     <div class="footer-list-item">
-                                        <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập cho công ty bạn</a>
+                                        <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập cho công
+                                            ty bạn</a>
                                     </div>
                                     <div class="footer-list-item">
                                         <a href="http://blog.internshala.com/internshala-editorials/team-diary/"
@@ -505,7 +508,8 @@
                                 <a href="/careers">Chúng tôi đang tuyển dụng</a>
                             </div>
                             <div class="footer-list-item">
-                                <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập sinh cho công ty của bạn</a>
+                                <a href="/registration/employer?utm_source=ISfooterHome">Thuê thực tập sinh cho công ty
+                                    của bạn</a>
                             </div>
                         </div>
                     </div>
