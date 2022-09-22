@@ -21,152 +21,7 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- ribbon -->
-    <div class="notification" id="error">
-    </div>
-    <div class="notification notification_general" id="general_notification" style="display: none">
-    </div>
-    <div id="custom_notification_parent">
-        <div class="notification notification_general" id="custom_notification" style="display: none">
-        </div>
-    </div>
-    <!-- modal - error message -->
-    <div class="modal fade in internshala-modal" id="error_modal" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="image_container error_image">
-                        <img src="static/images/common/modal_error.svg"/>
-                    </div>
-                    <div class="message_container">
-                        <div class="text-heading heading_4_5 small-device-text-center"></div>
-                        <div class="text-message body-main small-device-text-center"></div>
-                        <div class="button_container">
-                            <a class="btn btn-primary modal_primary_btn close_action" data-dismiss="modal"
-                               href="#">Đóng</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal - success message -->
-    <div class="modal fade in internshala-modal" id="success_modal" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="image_container success_image">
-                        <img src="static/images/common/modal_success.svg"/>
-                    </div>
-                    <div class="message_container">
-                        <div class="text-heading heading_4_5 small-device-text-center"></div>
-                        <div class="text-message body-main small-device-text-center"></div>
-                        <div class="button_container">
-                            <button class="btn btn-secondary modal_secondary_btn close_action" data-dismiss="modal">
-                                Hủy
-                            </button>
-                            <a class="btn btn-primary modal_primary_btn close_action" data-dismiss="modal"
-                               href="#">Đóng</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal - success message -->
-    <div class="modal fade in internshala-modal" id="success_modal_dual_button" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="image_container success_image">
-                        <img src="static/images/common/modal_success.svg"/>
-                    </div>
-                    <div class="message_container">
-                        <div class="text-heading heading_4_5 small-device-text-center"></div>
-                        <div class="text-message body-main small-device-text-center"></div>
-                        <div class="button_container">
-                            <a class="btn btn-secondary modal_secondary_btn close_action" data-dismiss="modal" href="#">Đóng</a>
-                            <a class="btn btn-primary modal_primary_btn close_action" data-dismiss="modal"
-                               href="#">Đóng</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal - alert message -->
-    <div class="modal fade in internshala-modal" id="alert_modal" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="image_container alert_image">
-                        <img src="static/images/common/modal_alert.svg"/>
-                    </div>
-                    <div class="message_container">
-                        <div class="text-heading heading_4_5 small-device-text-center"></div>
-                        <div class="text-message body-main small-device-text-center"></div>
-                        <div class="button_container">
-                            <a class="btn btn-primary modal_primary_btn close_action" data-dismiss="modal"
-                               href="#">Đóng</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--- confirmation modal-->
-    <div class="modal fade in internshala-modal confirmation_modal" id="confirmation_modal" style="display: none">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="message_container">
-                        <div class="text-heading heading_4_5"></div>
-                        <div class="text-message body-main"></div>
-                        <div class="button_container">
-                            <button class="btn btn-secondary modal_secondary_btn close_action" data-dismiss="modal">
-                                Hủy
-                            </button>
-                            <a class="btn btn-primary modal_primary_btn yes-button close_action" data-dismiss="modal"
-                               href="#">Có</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="loading_image">
-    </div>
-    <div class="nav_dropdown_backdrop">
-    </div>
-    <div class="toast internshala-toast loading_toast" id="loading_toast" style="display: none;">
-        <div class="toast-body-container">
-            <div class="toast-body heading_6_6">
-                Đang tải, xin vui lòng đợi...
-            </div>
-        </div>
-    </div>
-    <div class="toast internshala-toast general_toast" style="display: none;">
-        <div class="toast-body-container">
-            <div class="toast-body heading_6_6">
-            </div>
-        </div>
-    </div>
-    <div class="toast internshala-toast error_toast" style="display: none;">
-        <div class="toast-body-container">
-            <div class="toast-body heading_6_6">
-            </div>
-        </div>
-    </div>
-    <div class="toast internshala-toast black_bottom_toast" style="display: none;">
-        <div class="toast-body-container">
-            <div class="toast-body body-main">
-            </div>
-        </div>
-    </div>
-    <div class="popover_overlay">
-    </div>
-    <div class="chat_notification_loading_image" style="display: none;">
-    </div>
+
     <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal" id="login-modal" role="dialog" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -178,46 +33,18 @@
                 <div class="modal-body">
                     <div id="user-menu-container">
                         <div id="user-menu">
-                            <div class="row">
-                                <div class="col-xs-6 col-6 user-menu-item active login_student" id="modal_student">
-                                    Sinh viên
-                                </div>
-                                <div class="col-xs-6 col-6 user-menu-item login_employer" id="modal_employer">
-                                    Nhà tuyển dụng / T&amp;P
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                    <a class="google_login" href="#">
-                        <div id="google-button-container">
-                            <div class="google_image_container">
-                                <img src="static/images/login/google_logo.png"/>
-                            </div>
-                            <div class="google_content">
-                                Đăng nhập với Google
-                            </div>
-                        </div>
-                    </a>
-                    <div class="helper">
-                        <div class="text2">
-                            <p>Hoặc</p>
-                        </div>
-                        <div class="border"></div>
                     </div>
                     <form id="modal-login-form" method="POST" role="form">
                         <input name="csrf_test_name" type="hidden" value="07d4a0539d8f306794bdcf8d040027bb"/>
                         <div class="form-group">
                             <label class="control-label" for="email">Email</label>
-                            <input class="form-control" id="modal_email" name="email" placeholder="john@example.com"
-                                   tabindex="1" type="email"/>
+                            <input class="form-control" id="modal_email" name="email" tabindex="1" type="email"/>
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="password">Mật khẩu</label>
-                            <input class="form-control" id="modal_password" name="password"
-                                   placeholder="Must be atleast 6 characters" tabindex="2" type="password"/>
-                        </div>
-                        <div class="forgot_password">
-                            <a href="#" id="forgot-password">Quên mật khẩu ?</a>
+                            <label class="control-label" for="password">Password</label>
+                            <input class="form-control" id="modal_password" name="password" tabindex="2"
+                                   type="password"/>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary" id="modal_login_submit" tabindex="3" type="submit">Đăng nhập
@@ -225,7 +52,7 @@
                         </div>
                         <div class="form-group new_to_internshala">
                             <label>
-                                Bạn chưa có tài khoản ? Đăng ký (<a href="#">Sinh viên</a> / <a href="#">Công ty</a>)
+                                Đăng ký ngay tại đây (<a href="#">Sinh viên</a> / <a href="#">Công ty</a>)
                             </label>
                         </div>
                     </form>
@@ -233,104 +60,12 @@
             </div>
         </div>
     </div>
-    <!-- Login modal - error message for employers blocked -->
-    <div aria-hidden="true" class="modal fade" id="employer_blocked_error_modal" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="heading">
-                    Tài khoản của bạn bị treo.<i aria-hidden="true" class="ic-24-cross" data-dismiss="modal"
-                                                 id="close_modal" style="cursor: pointer;float:right"></i>
-                </div>
-                <div class="heading1">
-                    Tài khoản của bạn bị treo.<i aria-hidden="true" class="ic-24-cross" data-dismiss="modal"
-                                                 id="close_modal1" style="cursor: pointer;float:right"></i>
-                </div>
-                <div class="main_content">
-                    <div class="line1"></div>
-                    <div class="sub_heading">
-                        Có chuyện gì vậy?
-                    </div>
-                    <div>
-                        Chúng tôi đã xác định rằng tài khoản này vi phạm <span class="primary_color"><a href="#">điều khoản</a></span>của
-                        Internstars
-                    </div>
-                    <div class="content_specially_for">
-                        Cụ thể là,
-                    </div>
-                    <div class="error_heading" id="heading_content1"></div>
-                    <div class="error_content_1" id="error_content1"></div>
-                    <div class="error_heading" id="heading_content2"></div>
-                    <div class="error_content_1" id="error_content2"></div>
-                    <div class="error_content_2">
-                        Nếu bạn muốn khiếu nại điều này hoặc muốn làm rõ thêm, vui lòng liên hệ với nhóm của chúng tôi
-                        theo địa chỉ <span class="primary_color"><a href="#">complaints@internstars.com</a></span>
-                    </div>
-                    <div class="line2"></div>
-                    <div class="icon_container">
-                        <i class="ic-24-alert-circle"></i>
-                        <div class="icon_content">
-                            Nếu điều này xảy ra do nhầm lẫn, nó sẽ tự động được hoàn trả trong vòng 24 giờ.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="header_container container-fluid" id="header">
         <div class="max-width-container">
             <div class="layer"></div>
-            <div class="sidenav" id="mySidenav">
-                <div class="ham_menu_items_container guest">
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Thực tập</a></div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading">
-                            <a class="online-training-link" href="#">
-                                Thực tập mùa hè
-                                <div class="contest">
-                                    80% OFF
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading">
-                            <a class="specialization-training-link" href="#">
-<span class="specialization-training-title">
-<span>Chuyên ngành</span>
-</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Thực tập WFH</a></div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Công việc</a></div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Liên hệ với chúng tôi</a></div>
-                    </div>
-                    <hr class="ham_line_break"/>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Sinh viên - Đăng ký</a>
-                        </div>
-                    </div>
-                    <div class="ham_menu_items">
-                        <div class="ham_main_heading"><a href="#">Nhà tuyển dụng - Đăng ký</a>
-                        </div>
-                    </div>
-                    <div class="ham_menu_items without_link">
-                        <div class="ham_main_heading home_page_login_button" data-target="#login-modal"
-                             data-toggle="modal" id="ham_login_button">Đăng nhập
-                        </div>
-                    </div>
-                </div>
-            </div>
             <nav class="navbar navbar-expand-md">
                 <div class="brand_container">
-                    <span class="offer_hamburger_dot" id="offer_hamburger_dot"></span>
                     <a class="navbar-brand" href="#">
                         <img src="static/images/home/internships/categories/internstarslogotrans.png"/>
                     </a>
@@ -338,7 +73,7 @@
                 <div class="collapse navbar-collapse navbar_desktop">
                     <ul class="navbar-nav nav_menu_container">
                         <li class="nav-item dropdown dropdown-hover">
-                            <a class="nav-link dropdown-toggle" href="#">Đăng nhập/ Đăng ký <i
+                            <a class="nav-link dropdown-toggle" href="#">Đăng nhập / Đăng ký <i
                                     class="is_icon_header ic-24-filled-down-arrow"></i></a>
                             <div class="dropdown-menu dropdown-menu-center menu_dropdown" id="login_register-dropdown">
                                 <div class="dropdown-inner">
@@ -346,15 +81,18 @@
                                         <div class="inner-dropdown">
                                             <ul class="dropdown-menu-part profile-dropdown">
                                                 <li class="item">
-                                                    <a class="item_link" href="#" id="header_registration_link">Sinh
-                                                        viên - Đăng nhập</a>
+                                                    <a class="item_link" href="student.html"
+                                                       id="header_registration_link">Đăng ký
+                                                        tài khoản sinh viên</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a class="item_link" href="#">Nhà tuyển dụng - Đăng nhập</a>
+                                                    <a class="item_link" href="employer .html">Đăng ký tài khoản nhà
+                                                        tuyển dụng</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a class="item_link" data-target="#login-modal" data-toggle="modal"
-                                                       href="#" id="header_login_modal_button">Đăng nhập</a>
+                                                    <a class="item_link" data-target="#login-modal"
+                                                       data-toggle="modal" type="button" id="header_login_modal_button">Đăng
+                                                        nhập</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -638,10 +376,10 @@
                                         <div class="individual_internship_header">
                                             <div class="company">
                                                 <div class="heading_4_5 profile">
-                                                    <a class="view_detail_button" href="#">Chăm sóc thú cưng</a></div>
+                                                    <a class="view_detail_button" href="#">Phát triển ứng dụng di động</a></div>
                                                 <div class="heading_6 company_name">
-                                                    <a class="link_display_like_text view_detail_button" href="#">
-                                                        SuperTails </a>
+                                                    <a class="link_display_like_text view_detail_button" href="job_detail.html">
+                                                        Attestr </a>
                                                 </div>
                                             </div>
                                             <div class="internship_logo">

@@ -15,6 +15,45 @@
 </head>
 <body>
 <div id="wrapper">
+    <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal" id="login-modal" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <i aria-hidden="true" class="ic-24-cross"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="user-menu-container">
+                        <div id="user-menu">
+                        </div>
+                    </div>
+                    <form id="modal-login-form" method="POST" role="form">
+                        <input name="csrf_test_name" type="hidden" value="07d4a0539d8f306794bdcf8d040027bb"/>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <input class="form-control" id="modal_email" name="email" tabindex="1" type="email"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password">Password</label>
+                            <input class="form-control" id="modal_password" name="password" tabindex="2"
+                                   type="password"/>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" id="modal_login_submit" tabindex="3" type="submit">Đăng nhập
+                            </button>
+                        </div>
+                        <div class="form-group new_to_internshala">
+                            <label>
+                                Đăng ký ngay tại đây (<a href="#">Sinh viên</a> / <a href="#">Công ty</a>)
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="header_container container-fluid" id="header">
         <div class="max-width-container">
             <div class="layer"></div>
@@ -35,15 +74,16 @@
                                         <div class="inner-dropdown">
                                             <ul class="dropdown-menu-part profile-dropdown">
                                                 <li class="item">
-                                                    <a class="item_link" href="#" id="header_registration_link">Đăng ký
+                                                    <a class="item_link" href="student.html" id="header_registration_link">Đăng ký
                                                         tài khoản sinh viên</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a class="item_link" href="#">Đăng ký tài khoản nhà tuyển dụng</a>
+                                                    <a class="item_link" href="employer .html">Đăng ký tài khoản nhà tuyển dụng</a>
                                                 </li>
                                                 <li class="item">
-                                                    <a class="item_link" data-target="#login-modal" data-toggle="modal"
-                                                       href="#" id="header_login_modal_button">Đăng nhập</a>
+                                                    <a class="item_link" data-target="#login-modal"
+                                                       data-toggle="modal" type="button" id="header_login_modal_button">Đăng
+                                                        nhập</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -200,12 +240,13 @@
                                         <div class="individual_internship_header">
                                             <div class="company">
                                                 <div class="heading_4_5 profile">
-                                                    <a class="view_detail_button" href="#">Lập trình C#</a>
+                                                    <a class="view_detail_button" href="intern_detail.html">Doanh nhân xã hội</a>
                                                 </div>
                                                 <div class="heading_6 company_name">
                                                     <div class="company_and_premium">
                                                         <a class="link_display_like_text view_detail_button" href="#">
-                                                            Công ty cổ phần CORP </a>
+                                                            Hamari Pahchan NGO
+ </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -271,7 +312,7 @@
                                                 <div class="status status-small status-inactive">Part-time</div>
                                             </div>
                                         </div>
-                                        <a class="view_detail_button" href="#">
+                                        <a class="view_detail_button" href="intern_detail.html">
                                             <div>Xem chi tiết</div>
                                             <i class="ic-16-s15-chevron-right"></i>
                                         </a>
