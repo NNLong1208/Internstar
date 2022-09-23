@@ -1,7 +1,7 @@
 @font-face {
-    font-family: internshala-icons;
-    src: url(../../fonts/internshala_icon_fonts/internshala-icons.woff2);
-    src: url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('woff2'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('woff'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('truetype'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('svg'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('embedded-opentype');
+    font-family: internstars-icons;
+    src: url(../../fonts/internstars_icon_fonts/internstars-icons.woff2);
+    src: url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('woff2'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('woff'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('truetype'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('svg'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: block
@@ -10,7 +10,7 @@
 [class*=' is-icon-'],
 [class^=is-icon-] {
     font-size: 24px;
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -23,7 +23,7 @@
 
 [class$='-s'][class*=' is-icon-'],
 [class$='-s'][class^=is-icon-] {
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -3214,7 +3214,7 @@ button.focus-visible {
 .alert.alert-success>i:before,
 .alert.alert-warning>i:before,
 .checkbox input[type=checkbox]+label::after {
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
@@ -4317,7 +4317,7 @@ label {
     margin-bottom: 8px
 }
 
-.internshala-form {
+.internstars-form {
     position: relative;
     z-index: 0;
     margin: 32px auto;
@@ -4328,22 +4328,22 @@ label {
 }
 
 @media (max-width:768px) {
-    .internshala-form {
+    .internstars-form {
         padding: 16px
     }
 }
 
-.internshala-form .row .col:first-of-type {
+.internstars-form .row .col:first-of-type {
     padding-left: 15px;
     padding-right: 3px
 }
 
-.internshala-form .row .col:not(:first-of-type) {
+.internstars-form .row .col:not(:first-of-type) {
     padding-right: 3px;
     padding-left: 3px
 }
 
-.internshala-form .row .col:last-of-type {
+.internstars-form .row .col:last-of-type {
     padding-left: 3px;
     padding-right: 15px
 }
@@ -4732,7 +4732,7 @@ input {
 }
 
 .has-error .help-block:before {
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -5847,7 +5847,7 @@ pre[class*=language-] {
 
 .chosen-container-single .chosen-single div b {
     background: 0 0;
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -5888,7 +5888,7 @@ pre[class*=language-] {
 .chosen-container-multi .chosen-choices li.search-choice a:before,
 .chzn-container-multi .chzn-choices li.search-choice a:before {
     content: '\e93a';
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -8082,7 +8082,7 @@ body .ui-tooltip {
 .form-group .datepicker_wrapper:after,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before {
-    font-family: internshala-icons !important;
+    font-family: internstars-icons !important;
     speak: never;
     font-style: normal;
     font-weight: 400;
@@ -20948,45 +20948,45 @@ button.like-anchor .is-icon-chevron-right {
     }
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-1920.png?v=2)
+    background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-1920.png?v=2)
 }
 
 @media only screen and (max-width:1255.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
-        background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-1255.png?v=2)
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
+        background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-1255.png?v=2)
     }
 }
 
 @media only screen and (max-width:991.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
-        background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-991.png?v=2)
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
+        background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-991.png?v=2)
     }
 }
 
 @media only screen and (max-width:767.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
-        background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-767.png?v=2)
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
+        background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-767.png?v=2)
     }
 }
 
 @media only screen and (max-width:575.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
-        background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-575.png?v=2)
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
+        background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-575.png?v=2)
     }
 }
 
 @media only screen and (max-width:360.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner {
-        background-image: url(/cached_uploads/campaigns/internshala_birthday/banner-360.png?v=2)
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner {
+        background-image: url(/cached_uploads/campaigns/internstars_birthday/banner-360.png?v=2)
     }
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content {
     max-width: 1224px;
     margin-left: auto;
     margin-right: auto;
@@ -20996,23 +20996,23 @@ button.like-anchor .is-icon-chevron-right {
 }
 
 @media (max-width:991.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content {
         margin-top: 32px
     }
 }
 
 @media (max-width:767.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content {
         margin-top: 24px
     }
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content {
     text-align: center;
     color: #333
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21026,23 +21026,23 @@ button.like-anchor .is-icon-chevron-right {
 }
 
 @media (max-width:1255.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content {
         margin-left: 16px;
         margin-right: 16px
     }
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
         margin-top: 189px
     }
 }
 
 @media (max-width:991.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
         margin-top: 181px
     }
 }
 
 @media (max-width:767.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
         margin-top: 160px;
         font-size: 14px;
         line-height: 22px;
@@ -21051,7 +21051,7 @@ button.like-anchor .is-icon-chevron-right {
 }
 
 @media (max-width:575.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
         margin-top: 152px
     }
 }
@@ -21061,37 +21061,37 @@ button.like-anchor .is-icon-chevron-right {
         -webkit-animation: changeFinalHourBgPS 5s infinite;
         animation: changeFinalHourBgPS 5s infinite
     }
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container {
         margin-top: 160px
     }
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer {
     height: 24px;
     width: 24px;
     text-align: center;
     margin-right: 4px
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer svg {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer svg {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex
 }
 
-#content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer .timer-image {
+#content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer .timer-image {
     fill: #333
 }
 
 @media (max-width:767.98px) {
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .timer {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .timer {
         margin-top: 1px
     }
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer {
         height: 16px;
         width: 16px
     }
-    #content #banner-content #banner-container.campaign-banner.internshala_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer svg {
+    #content #banner-content #banner-container.campaign-banner.internstars_birthday-campaign-banner .campaign-banner-content .campaign-banner-left-content .timer-container .desktop-timer svg {
         height: 12px;
         width: 10.67px
     }

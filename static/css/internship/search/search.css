@@ -5,15 +5,15 @@
     clear:both
 }
 @font-face{
-    font-family:internshala-icons;
-    src:url('../../../fonts/internshala-icons_nb9ica.eot');
-    src:url('../../../fonts/internshala-icons_nb9ica.woff2.bin') format("woff2"),url('../../../fonts/internshala-icons_nb9ica.woff') format("woff"),url('../../../fonts/internshala-icons_nb9ica.ttf.bin') format("truetype"),url('../../../fonts/internshala-icons_nb9ica_internshala-icons.svg') format("svg"),url('../../../fonts/internshala-icons_nb9ica_iefix.eot') format("embedded-opentype");
+    font-family:internstars-icons;
+    src:url('../../../fonts/internstars-icons_nb9ica.eot');
+    src:url('../../../fonts/internstars-icons_nb9ica.woff2.bin') format("woff2"),url('../../../fonts/internstars-icons_nb9ica.woff') format("woff"),url('../../../fonts/internstars-icons_nb9ica.ttf.bin') format("truetype"),url('../../../fonts/internstars-icons_nb9ica_internstars-icons.svg') format("svg"),url('../../../fonts/internstars-icons_nb9ica_iefix.eot') format("embedded-opentype");
     font-weight:400;
     font-style:normal;
     font-display:block
 }
 [class*=" ic-"],[class^=ic-]{
-    font-family:internshala-icons!important;
+    font-family:internstars-icons !important;
     speak:never;
     font-style:normal;
     font-weight:400;
@@ -1844,37 +1844,37 @@
 .notification.notification_js_disabled{
     z-index:2000
 }
-.modal.internshala-modal-messages{
+.modal.internstars-modal-messages{
     z-index:1501;
     padding:100px 5px
 }
-.modal.internshala-modal-messages .modal-dialog{
+.modal.internstars-modal-messages .modal-dialog{
     margin-top:30px
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content{
+.modal.internstars-modal-messages .modal-dialog .modal-content{
     border-radius:6px;
     padding:7px
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-header{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-header{
     border-bottom:none
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-body{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-body{
     width:100%;
     padding:10px
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-body .table-cell{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-body .table-cell{
     display:table-cell;
     vertical-align:middle
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-body .table-cell img{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-body .table-cell img{
     width:80px;
     float:left;
     margin-right:10px
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-body hr{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-body hr{
     margin:5px 0 40px
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-body a.btn{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-body a.btn{
     position:absolute;
     bottom:10px;
     right:10px;
@@ -1884,40 +1884,40 @@
     box-shadow:none;
     border:0
 }
-.modal.internshala-modal-messages .modal-dialog .modal-content .modal-footer{
+.modal.internstars-modal-messages .modal-dialog .modal-content .modal-footer{
     border-top:none
 }
-.modal.internshala-modal{
+.modal.internstars-modal{
     display:none;
     z-index:1501
 }
-.modal.internshala-modal .modal-dialog{
+.modal.internstars-modal .modal-dialog{
     max-width:648px;
     margin:256px auto 16px
 }
-.modal.internshala-modal .modal-dialog .modal-content{
+.modal.internstars-modal .modal-dialog .modal-content{
     box-shadow:0 12px 24px rgba(0,0,0,.08);
     border-radius:6px;
     border:none
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-header{
+.modal.internstars-modal .modal-dialog .modal-content .modal-header{
     border-bottom:none
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body{
     display:flex;
     width:100%;
     padding:0
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog{
+    .modal.internstars-modal .modal-dialog{
         max-width:100%;
         margin:128px 16px 16px
     }
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body{
         flex-direction:column
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container{
     min-width:120px;
     max-width:120px;
     height:auto;
@@ -1928,11 +1928,11 @@
     display:flex;
     justify-content:center
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container img{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container img{
     width:48px
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container{
         min-width:100%;
         max-width:100%;
         width:100%;
@@ -1940,78 +1940,78 @@
         background-image:none;
         border-radius:6px 6px 0 0
     }
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container img{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container img{
         margin-top:24px
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.success_image{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.success_image{
     background-image:url('../../../images/common/modal_success_background.svg')
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.success_image{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.success_image{
         background:linear-gradient(to bottom,#E2FFCC 48px,#fff 0)
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.error_image{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.error_image{
     background-image:url('../../../images/common/modal_error_background.svg')
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.error_image{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.error_image{
         background:linear-gradient(to bottom,#FFF2EB 48px,#fff 0)
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.alert_image{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.alert_image{
     background-image:url('../../../images/common/modal_alert_background.svg')
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container{
     flex-grow:1;
     padding:32px 32px 32px 24px
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-heading{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-heading{
     margin-bottom:16px
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .image_container.alert_image{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .image_container.alert_image{
         background:linear-gradient(to bottom,#FFF8C4 48px,#fff 0)
     }
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container{
         padding:16px 24px 24px
     }
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-heading.small-device-text-center{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-heading.small-device-text-center{
         text-align:center
     }
 }
 @media (max-width:767px) and (max-width:575px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-heading.small-device-text-center{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-heading.small-device-text-center{
         text-align:left
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-message{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-message{
     color:#484848
 }
 @media (max-width:767px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-message.small-device-text-center{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-message.small-device-text-center{
         text-align:center
     }
 }
 @media (max-width:575px){
-    .modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .text-message.small-device-text-center{
+    .modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .text-message.small-device-text-center{
         text-align:left
     }
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .button_container{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .button_container{
     text-align:right;
     margin-top:8px
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .button_container .btn-primary{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .button_container .btn-primary{
     color:#fff;
     margin-left:16px;
     margin-top:16px
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-body .message_container .button_container .btn-secondary{
+.modal.internstars-modal .modal-dialog .modal-content .modal-body .message_container .button_container .btn-secondary{
     margin-top:16px
 }
-.modal.internshala-modal .modal-dialog .modal-content .modal-footer{
+.modal.internstars-modal .modal-dialog .modal-content .modal-footer{
     border-top:none
 }
 .modal.confirmation_modal .modal-dialog .modal-content .modal-body .message_container{
@@ -2033,10 +2033,10 @@
     background:url('../../../images/common/ajax-loader.gif') 50% 50% no-repeat rgba(255,255,255,.8)
 }
 @media (max-width:768px){
-    .modal.internshala-modal-messages .modal-dialog .modal-content .modal-body .table-cell img{
+    .modal.internstars-modal-messages .modal-dialog .modal-content .modal-body .table-cell img{
         display:none
     }
-    .modal.internshala-modal-messages .modal-dialog .modal-content .modal-body .table-cell p{
+    .modal.internstars-modal-messages .modal-dialog .modal-content .modal-body .table-cell p{
         font-size:12px
     }
 }
@@ -3608,11 +3608,11 @@
     margin-top:24px;
     padding-top:24px
 }
-.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internshala_center,.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internshala_left{
+.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internstars_center,.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internstars_left{
     width:100%;
     max-width:220px
 }
-.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internshala_right{
+.generic_footer .container-fluid .max-width-container #footer-about-us-container #about_internstars_right{
     width:100%;
     max-width:200px
 }
@@ -3729,16 +3729,16 @@
         display:flex;
         justify-content:space-between
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internshala_left{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internstars_left{
         display:inline-block;
         width:200px
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internshala_center{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internstars_center{
         display:inline-block;
         vertical-align:top;
         width:200px
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internshala_right{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internstars_right{
         width:200px
     }
     .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container{
@@ -3751,10 +3751,10 @@
         font-size:14px;
         line-height:22px
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internshala_left{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internstars_left{
         width:200px
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internshala_center,.generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internshala_right{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internstars_center,.generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-training-container #trainings_internstars_right{
         vertical-align:top;
         width:200px
     }
@@ -3769,11 +3769,11 @@
     .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner{
         display:inline
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internshala_left{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internstars_left{
         display:block;
         width:100%
     }
-    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internshala_center{
+    .generic_footer .container-fluid .max-width-container .footer_container .footer-column .footer-link-conatiner #about_internstars_center{
         display:inline
     }
     .generic_footer .container-fluid .max-width-container #footer-bottom{
@@ -3864,10 +3864,10 @@
     }
 }
 @media (max-width:767px){
-    #trainings_internshala_center,.footer-training-container{
+    #trainings_internstars_center,.footer-training-container{
         display:inline!important
     }
-    #about_internshala_left{
+    #about_internstars_left{
         margin-right:80px;
         flex-shrink:0
     }
@@ -4208,7 +4208,7 @@ button.focus-visible{
 .checkbox input[type=checkbox]+label::after{
     content:"\e90a";
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     font-weight:400;
     line-height:1;
     color:#fff;
@@ -4266,7 +4266,7 @@ label[disabled]{
     font-size:14px;
     margin-bottom:8px
 }
-.internshala-form{
+.internstars-form{
     position:relative;
     z-index:0;
     margin:32px auto;
@@ -4276,19 +4276,19 @@ label[disabled]{
     background:#fff
 }
 @media (max-width:768px){
-    .internshala-form{
+    .internstars-form{
         padding:16px
     }
 }
-.internshala-form .row .col:first-of-type{
+.internstars-form .row .col:first-of-type{
     padding-left:15px;
     padding-right:3px
 }
-.internshala-form .row .col:not(:first-of-type){
+.internstars-form .row .col:not(:first-of-type){
     padding-right:3px;
     padding-left:3px
 }
-.internshala-form .row .col:last-of-type{
+.internstars-form .row .col:last-of-type{
     padding-left:3px;
     padding-right:15px
 }
@@ -4547,7 +4547,7 @@ input{
 .has-error .help-block:before{
     content:"\e900";
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     font-weight:400;
     line-height:1;
     vertical-align:sub;
@@ -6370,7 +6370,7 @@ body .ui-tooltip{
 }
 .form-group .datepicker_wrapper:after,.ui-datepicker .ui-datepicker-header .ui-datepicker-next:before,.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before{
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     font-weight:400;
     line-height:1;
     speak:never;
@@ -6668,7 +6668,7 @@ b,strong,th,thead{
 .pager-border{
     border:1px solid!important
 }
-.internshala-toast{
+.internstars-toast{
     position:fixed;
     top:0;
     text-align:center;
@@ -6683,66 +6683,66 @@ b,strong,th,thead{
     opacity:1
 }
 @media (max-width:767px){
-    .internshala-toast{
+    .internstars-toast{
         padding-left:16px;
         padding-right:16px
     }
-    .internshala-toast .toast-body-container .toast-body .toast-message{
+    .internstars-toast .toast-body-container .toast-body .toast-message{
         text-align:left
     }
 }
-.internshala-toast.loading_toast{
+.internstars-toast.loading_toast{
     top:56px
 }
-.internshala-toast .toast-body-container{
+.internstars-toast .toast-body-container{
     display:inline-block;
     box-sizing:border-box
 }
-.internshala-toast .toast-body-container .toast-body{
+.internstars-toast .toast-body-container .toast-body{
     display:flex;
     box-shadow:0 2px 4px rgba(0,0,0,.08);
     border-radius:6px;
     padding:12px 16px;
     margin-bottom:10px
 }
-.internshala-toast .toast-body-container .toast-body .toast-message{
+.internstars-toast .toast-body-container .toast-body .toast-message{
     align-self:center
 }
-.internshala-toast .toast-body-container .toast-body .btn{
+.internstars-toast .toast-body-container .toast-body .btn{
     min-height:32px;
     margin-left:24px;
     align-self:flex-start
 }
-.internshala-toast .toast-body-container .toast-body .btn:focus{
+.internstars-toast .toast-body-container .toast-body .btn:focus{
     outline:0;
     box-shadow:none
 }
-.internshala-toast.general_toast .toast-body-container .toast-body,.internshala-toast.loading_toast .toast-body-container .toast-body{
+.internstars-toast.general_toast .toast-body-container .toast-body,.internstars-toast.loading_toast .toast-body-container .toast-body{
     background:#EAFCFF;
     border:1px solid #258a48;
     color:#258a48
 }
-.internshala-toast.general_toast .toast-body-container .toast-body .btn,.internshala-toast.loading_toast .toast-body-container .toast-body .btn{
+.internstars-toast.general_toast .toast-body-container .toast-body .btn,.internstars-toast.loading_toast .toast-body-container .toast-body .btn{
     background:#258a48;
     color:#fff
 }
-.internshala-toast.error_toast .toast-body-container .toast-body{
+.internstars-toast.error_toast .toast-body-container .toast-body{
     background:#FFF2EB;
     border:1px solid #FFC3AE;
     color:#C21D08
 }
-.internshala-toast.error_toast .toast-body-container .toast-body .btn{
+.internstars-toast.error_toast .toast-body-container .toast-body .btn{
     background:#C21D08;
     color:#fff;
     min-width:105px
 }
-.internshala-toast.black_bottom_toast{
+.internstars-toast.black_bottom_toast{
     bottom:24px;
     top:auto;
     max-width:100%;
     color:#fff
 }
-.internshala-toast.black_bottom_toast .toast-body{
+.internstars-toast.black_bottom_toast .toast-body{
     background:#484848
 }
 .freetext-container :not(.fa){
@@ -6981,11 +6981,11 @@ ul.location_autocomplete_plugin li:last-child:after{
     padding-top:11px;
     padding-bottom:11px
 }
-#login-modal .modal-dialog .modal-content .modal-body #modal-login-form .new_to_internshala{
+#login-modal .modal-dialog .modal-content .modal-body #modal-login-form .new_to_internstars{
     text-align:center;
     margin-bottom:0
 }
-#login-modal .modal-dialog .modal-content .modal-body #modal-login-form .new_to_internshala label{
+#login-modal .modal-dialog .modal-content .modal-body #modal-login-form .new_to_internstars label{
     margin-bottom:0
 }
 #login-modal .modal-dialog .modal-content .modal-body #modal-login-form .forgot_password{
@@ -7621,7 +7621,7 @@ ul.location_autocomplete_plugin li:last-child:after{
 .chosen-container-single .chosen-single div b{
     background:0 0;
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     speak:never;
     font-style:normal;
     font-weight:400;
@@ -7656,7 +7656,7 @@ ul.location_autocomplete_plugin li:last-child:after{
 }
 .chosen-container-multi .chosen-choices li.search-choice a:before,.chzn-container-multi .chzn-choices li.search-choice a:before{
     content:"\e914";
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     font-weight:400;
     text-transform:none;
     position:absolute;
@@ -9688,7 +9688,7 @@ ul.location_autocomplete_plugin li:last-child:after{
 #internships_list_container #reference #list_container #internship_list_container #pagination #navigation-backward::before,#internships_list_container #reference #list_container #marketing_first_container #pagination #navigation-backward::before{
     content:"\e959";
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     speak:never;
     font-style:normal;
     font-weight:400;
@@ -9701,7 +9701,7 @@ ul.location_autocomplete_plugin li:last-child:after{
 #internships_list_container #reference #list_container #internship_list_container #pagination #navigation-forward::before,#internships_list_container #reference #list_container #marketing_first_container #pagination #navigation-forward::before{
     content:"\e95a";
     font-size:16px;
-    font-family:internshala-icons!important;
+    font-family:internstars-icons!important;
     speak:never;
     font-style:normal;
     font-weight:400;
@@ -10112,31 +10112,31 @@ ul.location_autocomplete_plugin li:last-child:after{
 #internships_list_container #reference #list_container #marketing_first_container #dream_icon_experience .internship_meta .individual_internship_header .company .presents{
     margin-bottom:4px
 }
-#internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .internship_meta .individual_internship_details .internship_other_details_container{
+#internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .internship_meta .individual_internship_details .internship_other_details_container{
     display:flex;
     flex-wrap:wrap;
     margin-top:24px
 }
 @media (max-width:767px){
-    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .internship_meta .individual_internship_details .internship_other_details_container{
+    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .internship_meta .individual_internship_details .internship_other_details_container{
         margin-top:16px
     }
 }
 @media (max-width:360px){
-    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .internship_meta .individual_internship_details .internship_other_details_container{
+    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .internship_meta .individual_internship_details .internship_other_details_container{
         margin-top:18px
     }
 }
-#internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .internship_meta .individual_internship_details .internship_other_details_container .bullet_container ul{
+#internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .internship_meta .individual_internship_details .internship_other_details_container .bullet_container ul{
     padding-left:18px;
     margin-right:40px;
     margin-bottom:12px
 }
-#internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .button_container .view_detail_button{
+#internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .button_container .view_detail_button{
     margin-top:12px
 }
 @media (max-width:360px){
-    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internshala .button_container .view_detail_button{
+    #internships_list_container #reference #list_container #marketing_first_container #summer_with_internstars .button_container .view_detail_button{
         margin-top:4px
     }
 }

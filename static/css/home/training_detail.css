@@ -1,7 +1,7 @@
 @font-face {
-    font-family: internshala-icons;
-    src: url(../../fonts/internshala_icon_fonts/internshala-icons.woff2);
-    src: url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('woff2'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('woff'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('truetype'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('svg'), url(../../fonts/internshala_icon_fonts/internshala-icons.woff2) format('embedded-opentype');
+    font-family: internstars-icons;
+    src: url(../../fonts/internstars_icon_fonts/internstars-icons.woff2);
+    src: url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('woff2'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('woff'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('truetype'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('svg'), url(../../fonts/internstars_icon_fonts/internstars-icons.woff2) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: block
@@ -9,7 +9,7 @@
 [class*=" is-icon-"],
 [class^="is-icon-"] {
   font-size: 24px;
-  font-family: internshala-icons !important;
+  font-family:internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
@@ -21,7 +21,7 @@
 }
 [class$="-s"][class*=" is-icon-"],
 [class$="-s"][class^="is-icon-"] {
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
@@ -2622,7 +2622,7 @@ button.focus-visible {
 .alert.alert-success > i:before,
 .alert.alert-warning > i:before,
 .checkbox input[type="checkbox"] + label::after {
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-variant: normal;
@@ -3545,7 +3545,7 @@ label {
   font-weight: 400;
   margin-bottom: 8px;
 }
-.internshala-form {
+.internstars-form {
   position: relative;
   z-index: 0;
   margin: 32px auto;
@@ -3555,19 +3555,19 @@ label {
   background: #fff;
 }
 @media (max-width: 768px) {
-  .internshala-form {
+  .internstars-form {
     padding: 16px;
   }
 }
-.internshala-form .row .col:first-of-type {
+.internstars-form .row .col:first-of-type {
   padding-left: 15px;
   padding-right: 3px;
 }
-.internshala-form .row .col:not(:first-of-type) {
+.internstars-form .row .col:not(:first-of-type) {
   padding-right: 3px;
   padding-left: 3px;
 }
-.internshala-form .row .col:last-of-type {
+.internstars-form .row .col:last-of-type {
   padding-left: 3px;
   padding-right: 15px;
 }
@@ -3898,7 +3898,7 @@ input {
 }
 .has-error .help-block:before {
   content: "\e903";
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
@@ -4908,7 +4908,7 @@ pre[class*="language-"] {
 }
 .chosen-container-single .chosen-single div b {
   background: 0 0;
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
@@ -4940,7 +4940,7 @@ pre[class*="language-"] {
 .chosen-container-multi .chosen-choices li.search-choice a:before,
 .chzn-container-multi .chzn-choices li.search-choice a:before {
   content: "\e93a";
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
@@ -6733,7 +6733,7 @@ body .ui-tooltip {
 .form-group .datepicker_wrapper:after,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before,
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before {
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   font-style: normal;
   text-transform: none;
   line-height: 1;
@@ -12134,7 +12134,7 @@ button.like-anchor .is-icon-chevron-right {
   .phone-number-container.show-error
   .help-block:before {
   content: "\e903";
-  font-family: internshala-icons !important;
+  font-family: internstars-icons !important;
   speak: never;
   font-style: normal;
   font-weight: 400;
