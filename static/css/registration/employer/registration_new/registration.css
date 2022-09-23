@@ -1425,7 +1425,8 @@
     padding-bottom:8px;
     height:100%;
     display:flex;
-    align-items:center
+    align-items:center;
+    margin-left: 45px;
 }
 @media (max-width:992px){
     #header .max-width-container .navbar .brand_container .navbar-brand{
@@ -8242,9 +8243,9 @@ ul.location_autocomplete_plugin li:last-child:after{
 #know_jobs .know_jobs_banner{
     margin:0 auto;
     background-position:bottom right;
-    background-size:contain;
+    background-size:cover;
     background-repeat:no-repeat;
-    background-image:url('../../../../images/registration/employer/registration_new/internship/jobs_banner/r1920-min.png');
+    background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80');
     min-height:360px;
     padding:40px;
     display:flex;
@@ -8257,24 +8258,24 @@ ul.location_autocomplete_plugin li:last-child:after{
 }
 @media (max-width:1366px){
     #know_jobs .know_jobs_banner{
-        background-image:url('../../../../images/registration/employer/registration_new/internship/jobs_banner/r1366-min.png');
+        background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80');
         min-height:360px
     }
 }
 @media (max-width:1255px){
     #know_jobs .know_jobs_banner{
-        background-image:url('../../../../images/registration/employer/registration_new/internship/jobs_banner/r1255-min.png');
+        background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80');
         min-height:360px
     }
 }
 @media (max-width:991px){
     #know_jobs .know_jobs_banner{
-        background-image:url('../../../../images/registration/employer/registration_new/internship/jobs_banner/r991-min.png')
+        background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80');
     }
 }
 @media (max-width:767px){
     #know_jobs .know_jobs_banner{
-        background-image:url('../../../../images/registration/employer/registration_new/internship/jobs_banner/r767-min.png')
+        background-image:url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29yayUyMGRlc2t8ZW58MHx8MHx8&w=1000&q=80');
     }
 }
 @media (max-width:991px){
@@ -9371,15 +9372,18 @@ ul.location_autocomplete_plugin li:last-child:after{
 }
 #registration-container #registration-container-right{
     display:flex;
-    margin-top:48px
+    margin-top:48px;
+    width: 440px;
+    position: relative;
 }
-@media (max-width:991px){
+/* @media (max-width:991px){
     #registration-container{
         max-width:728px;
-        flex-direction:column
+        flex-direction:column;
     }
     #registration-container #registration-container-right{
-        margin:393px auto 0
+        margin:393px auto 0;
+        
     }
 }
 @media (max-width:767px){
@@ -9420,19 +9424,23 @@ ul.location_autocomplete_plugin li:last-child:after{
     }
 }
 #registration-container #registration-container-right #form-container{
-    margin-left:15px;
-    width:360px
+    left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+    width:90%;
+    position: absolute;
 }
 @media (max-width:991px){
     #registration-container #registration-container-right #form-container{
-        margin-left:0
+        margin-left:0 auto;
+        
     }
 }
 @media (max-width:767px){
     #registration-container #registration-container-right #form-container{
         max-width:360px;
-        width:100%
-    }
+        width:100%;
+    } */
 }
 #registration-container #registration-container-right #form-container #employer_registration_heading{
     text-align:center;
@@ -9451,7 +9459,10 @@ ul.location_autocomplete_plugin li:last-child:after{
     padding:24px;
     box-shadow:0 8px 16px rgba(0,0,0,.08);
     margin-top:0;
-    margin-bottom:0
+    margin-bottom:0;
+    /* width: 400px;
+    margin-left: 11px; */
+    
 }
 #registration-container #registration-container-right #form-container form #job_employer_registration_button{
     text-align:center;
@@ -9503,4 +9514,11 @@ ul.location_autocomplete_plugin li:last-child:after{
 #header .max-width-container .navbar .collapse .navbar-nav li.nav-item.active a.nav-link{
     border-bottom:4px solid #008BDC;
     color:#008BDC
+}
+
+
+#content #content-inner {
+    width: 100%;
+    background-size:cover;
+    background-image: url(https://images.pexels.com/photos/257894/pexels-photo-257894.jpeg?cs=srgb&dl=pexels-pixabay-257894.jpg&fm=jpg);
 }
